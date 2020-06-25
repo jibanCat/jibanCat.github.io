@@ -1,6 +1,7 @@
 body { 
 background-color: #aabbdd;
 /* background-image: url("images/covariance_matrix_zqsos2_1176-1256_viridis.jpg"); */
+/* The background image should be uploaded in your website's repo in images/ folder */
 background-image: url("images/covariance_matrix_Lyforest.jpg");
 /*font-family: sans-serif;*/
 font-family: 'News Cycle', sans-serif;
