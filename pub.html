@@ -28,19 +28,19 @@
                 <div class="paperfl"> <span class="papertitle">Automated Measurement of Quasar Redshift with a Gaussian Process
                 </span>
                 <span class="paperlinks">[<a
-                    href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:2006.07343">ads</a>]
+                    href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.498.5227F/abstract">ads</a>]
                     [<a href="https://arxiv.org/abs/2006.07343">arXiv:2006.07343  [astro-ph.GA]</a>]
                 </span> </div>
                 <div><span class="paperauthors">Leah Fauber, Ming-Feng Ho, Simeon Bird, Christian R. Shelton, Roman
                     Garnett, Ishita Korde</span>
-                    <!-- , submitted to MNRAS (Jun. 2020) -->
+                    , accepted to MNRAS (Sept. 2020)
                 </div>
             </div><br />
 
             <div class="paper">
                 <div class="paperfl"><span class="papertitle">Detecting Multiple DLAs per Spectrum in SDSS DR12 with Gaussian Processes</span>
                     <span class="paperlinks">[<a
-                            href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:2003.11036">ads</a>]
+                            href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.496.5436H/abstract">ads</a>]
                         [<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036 [astro-ph.CO]</a>]
                     </span> </div>
                 <div><span class="paperauthors">Ming-Feng Ho, Simeon Bird, Roman Garnett</span>
@@ -63,15 +63,13 @@
             <!-- Current projects -->
             <h2>Current Projects</h2>
 
-            I am currently working on emulations in numerical simulations
+            I am currently working on multi-fidelity emulations in numerical simulations
             (Simeon's previous <a href="https://arxiv.org/abs/1812.04654">paper</a>).
             The idea is to use a Gaussian process to explore the input parameter space,
             which was usually done manually by simulators.
 
             I am also collaborating with <a href="https://rezamonadi.github.io">Reza Monadi</a>
             on detecting metal absorbers with Gaussian processes.
-
-            
 
             <!-- Code region -->
             <h2>Codes</h2>
@@ -91,12 +89,30 @@
                     </span>
                 </div>
                     <div>
-                        This is a modified version of code from Garnett (2017) [<a href="https://arxiv.org/abs/1605.04460">arXiv:1605.04460 [astro-ph.CO]</a>].
+                        This is a modified version of the GP-DLA code from Garnett (2017) [<a href="https://arxiv.org/abs/1605.04460">arXiv:1605.04460 [astro-ph.CO]</a>].
                         It includes sub-DLAs as an alternative model and allows the GP mean model changed according to
                         the effective optical depth from the intergalactic medium.
                         It generates a DLA catalogue with maximum DLA per sightline equal to four.
                     </div>
             </div>
+
+            <!-- code 1.5 -->
+            <div class="paper">
+                <div class="paperfl">
+                    <span class="papertitle">Gaussian process code for detecting DLAs, in Python!</span>
+                    <span class="paperlinks">
+                        [<a href="https://github.com/jibanCat/gpy_dla_detection">Github repo</a>]
+                    </span>
+                </div>
+                    <div>
+                        This is the Python version of our GP-DLA code, which I rewrote it based on our
+                        Ho-Bird-Garnett 2020 paper.
+                        It also offers features for:
+                        (1) Quasar redshift estimation; (2) MCMC implementation on searching the DLA
+                        parameters (now in <a href="https://github.com/jibanCat/gpy_dla_detection/pull/10">mcmc branch</a>, comments are welcome).
+                    </div>
+            </div>
+
         
             <!-- code 2 -->
             <div class="paper">
