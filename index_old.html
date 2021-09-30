@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- This is the header of the website; assumed to be the same for all html files -->
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- [Change] Change your name here -->
+        <title>Ming-Feng Ho</title>
+        <!-- The css define the style; no need to change except the background image -->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
+</head>
+
+<!-- adopt from Simeon Bird's website -->
+
+<body>
+        <div class="main centered">
+                <!-- [Change] Change your name here -->
+                <h1 class="centered">Ming-Feng Ho</h1>
+                <div id="menu">
+                        <a href="index.html">Home</a>
+                        <a href="pub.html">Publications</a>
+                        <!-- <a href="https://arxiv.org/a/bird_s_2.html">Publications</a> -->
+                        <!-- [Change] Uncommeted the next line if you want people access to your cv.pdf, which needs to be uploaded to the repo under the root directory -->
+                        <!-- <a href="cv.pdf">CV</a> -->
+                        <!-- [Change] Change to your GitHub url -->
+                        <!-- within <a href="url"> </a> is how we put an url on a word -->
+                        <a href="https://github.com/jibancat/">Github</a>
+                        <a href="others.html">Others</a>
+                </div>
+
+                <div class="content">
+                        <div id="me_div">
+                                <!-- [Change] This is where you put your photo; the photo file assumed to be in images/ -->
+                                <img src="images/Me_homeoffice.jpg" id="me" alt="Picture of Ming-Feng in my home office" title="Home office with cello suite score (the one not yet able to play!). The best thing you can do for entertainment during COVID is playing Bach suite ..." />
+                        </div>
+                        
+                        <!-- This is the header of the main text -->
+                        <!-- <h2>Research</h2> -->
+                        <!-- [Change] within <p> and </p> is the first paragraph, which is your self-introduction -->
+                        <p>
+                                I am a PhD student in the department of Physics and Astronomy at UC Riverside (2018-), working with <a href="http://sbird.github.io/">Simeon Bird</a> on <strong>various machine learning related topics in astronomy and cosmology</strong>.
+                                <a href="https://profiles.ucr.edu/mingfeng.ho">[My UCR profile link]</a>.
+                                I will be supported by NASA's 3-year <a href="https://astrobiology.nasa.gov/news/finesst-proposal-due-date-approaching/">FINESST</a> award starting from Fall 2021, working on multi-fidelity emulators for cosmological simulations (<a href="https://insideucr.ucr.edu/awards/2021/06/23/physics-graduate-student-receives-prestigious-nasa-fellowship">Inside UCR</a>).
+                        </p>
+
+                        <!-- [Change] This is the 2nd paragraph -->
+                        <h2>Research Interests</h2>
+                        <p>
+                                I am interested in intergalactic medium and numerical cosmology.
+                                I am also interested in using machine learning to model quasars emissions,
+                                the lights from supermassive black holes.
+                                I improved a <strong>Gaussian process (GP)</strong> based model (original author: <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> [<a href="https://arxiv.org/abs/1605.04460">Garnett(2017)</a>])
+                                to find <strong>damped Lyman alpha absorbers (DLAs)</strong>
+                                in the intergalactic medium with consideration of weak Lyman alpha absorptions
+                                [<a href="https://github.com/rmgarnett/gp_dla_detection/tree/master/multi_dlas">code</a>]
+                                [<a href="https://arxiv.org/abs/2003.11036">Ho-Bird-Garnett (2020)</a>].
+                                I also use the GP model to find DLAs in SDSS DR16 [<a href="https://github.com/jibanCat/gp_dla_detection_dr16q_public">code</a>]
+                                [<a href="https://github.com/jibanCat/gp_dla_detection_dr16q_public">Ho-Bird-Garnett (2021)</a>]
+                                We also performed probabilistic inference on <strong>quasar redshifts</strong> using our Gaussian process
+                                based model.
+                                [<a href="https://github.com/sbird/gp_qso_redshift">code</a>][<a href="https://arxiv.org/abs/2006.07343">Fauber et al. (2020)</a>].
+                                I am currently working on building <strong> multi-fidelity emulators</strong> on a cosmological simulation-
+                                <a href="https://github.com/MP-Gadget/MP-Gadget">MP-Gadget</a>, see <a href="https://arxiv.org/abs/2105.01081">Ho-Bird-Shelton (2021)</a>.
+                                
+                        </p>
+
+                        <!-- Header two -->
+                        <h2>Motivation</h2>
+                        <p>
+                                My research motivation comes from my enthusiasm for helping relieve people from labour-intensive works in academia.
+                                During my time pursuing higher education, I have seen countless people lose their trust in research.
+                                They were told devoting time to labour-intensive jobs was the most efficient way to produce research results for their labs.
+                                I have a strong belief that automated tools or better models can replace all repetitive works.
+                                Academia is a place for creative thinking.
+                                At least in my field, I want to help astronomers automate their works through combining physical models and machine learning.
+                                To systematically change things, I have to keep doing research on both astronomy data (e.g., Lyman alpha forest) and astrophysical simulations (e.g., MP-Gadget).
+                        </p>
+
+                        <p>
+                                (<strong>Picture</strong>: me in my home office during COVID;
+                                <strong>Background</strong>: covariance of quasar spectrum from Lyman break - SiIV.)
+                        </p>
+                </div>
+        </div>
+</body>
+
+</html>
