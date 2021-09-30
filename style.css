@@ -1,11 +1,11 @@
-body { 
-background-color: #aabbdd;
+/* body {  */
+/* background-color: #aabbdd; */
 /* background-image: url("images/covariance_matrix_zqsos2_1176-1256_viridis.jpg"); */
 /* The background image should be uploaded in your website's repo in images/ folder */
-background-image: url("images/covariance_matrix_siv.png");
+/* background-image: url("images/covariance_matrix_siv.png"); */
 /*font-family: sans-serif;*/
-font-family: 'News Cycle', sans-serif;
-}
+/* font-family: 'News Cycle', sans-serif; */
+/* } */
 
 h1 {
 text-align: center; 
@@ -20,13 +20,13 @@ margin-left: auto;
 margin-right: auto;
 }
 
-.main { 
-background-color: #F2F3F4; /*#FFFFFF;*/
-padding: 5px 20px 20px 20px;
-border: 2px solid #5D6D7E;
-max-width: 850px;
-min-height: 800px;
-}
+/* .main { 
+/* background-color: #F2F3F4; #FFFFFF; */
+/* padding: 5px 20px 20px 20px; */
+/* border: 1px solid black; */
+/* max-width: 850px; */
+/* min-height: 800px; */
+/* } */ 
 
 .papertitle {
 font-weight: bold;
@@ -74,32 +74,32 @@ font-style: normal;
 margin-bottom: 0.5em
 }
 
-#me { 
+/* #me { 
 float: right; 
 width: 200px;
-border: 1.5px solid #5D6D7E;
+border: 1px solid black;
 margin-bottom: 5px;
-}
+} */
 
-#me_div {
+/* #me_div {
 float: right; 
 width: 202px;
 font-size: x-small;
 }
- 
+        
 #menu a:link {
-        color: #1F618D;
+        color: blue;
         text-decoration: none;
 }
 
 #menu a:visited {
         text-decoration: none;
-        color: #1F618D;
+        color: blue;
 }
 
 #menu a:active {
         text-decoration: none; 
-        color:#C0392B;
+        color:red;
 }
 
 #menu a:hover {
@@ -112,4 +112,4 @@ font-size: x-small;
         text-align: center;
         font-size: large;
 }
-
+ */
