@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <base href="..">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css"/>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=default">
+    </script>
+    <meta name="description" content="P&A Student Seminar">
+    <meta name="resource-type" content="document">
+    <meta name="distribution" content="global">
+    <meta name="KeyWords" content="Seminar">
+    <title>Program | P&A Student Seminar</title>
+</head>
+
+<body>
+
+    <div class="banner">
+        <img src="assets/banner.jpg" alt="P&A Student Seminar Banner" width="1000" height="500">
+        <div class="top-left">
+            <span class="title1" style="float: left">Physics and Astronomy<br></span><span class="title2" style="float: right"><br>Student Seminar Series</span>
+        </div>
+        <div class="bottom-right">
+            Every Monday at 4 pm (tentative)
+            <br> UCR (Physis 3027), May 16 ~, 2022
+        </div>
+    </div>
+
+    <table class="navigation">
+        <tr>
+            <td class="navigation">
+                <a title="Seminar Home Page" href="index.html">Home</a>
+            </td>
+            <td class="navigation">
+                <a title="Register for the Seminar" href="registration/index.html">Registration</a>
+            </td>
+            <td class="navigation">
+                <a class="current" title="Seminar Program" href="program/index.html">Program</a> 
+            </td>
+            <td class="navigation">
+                <a title="Directions to the Seminar" href="directions/index.html">Directions</a>
+            </td>
+            <!-- <td class="navigation">
+                <a title="Conference Flyer" href="flyer">Flyer</a>
+            </td> -->
+        </tr>
+    </table>
+
+    <h2>Student Seminar Program (weekly)</h2>
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                May XX, XX:XX pm
+            </td>
+            <td class="title">
+                Interesting Title of a Talk 
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Speaker Name (University)
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                Here&rsquo;s where you put the abstract of the talk. Notice that with MathJax you can include mathematical notation in the abstract like \(f(x)=3x-7\) or like \(h^0(X_t,\omega_{X_t}^{\otimes m})\) or whatever you want. Just notice the MathJax line in the head of this HTML document that allows this. I&rsquo;m going to blab just a tiny bit more in this abstract, but all the other abstracts below, except the ones for the plenary talks, will be just <i>Lorem Ipsum</i> text that needs to be replaced by real abstracts.
+            </td>
+        </tr>
+    </table>
+
+    <table id="PUTSPEAKERNAMEHERE">
+        <tr>
+            <td class="date" rowspan="3">
+                TBD
+            </td>
+            <td class="title">
+                Multi-Fidelity Emulation for Cosmological Simulations
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+                Ming-Feng Ho (University of California, Riverside)
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+                We present the first implementation of multi-fidelity emulation in cosmology, where many low-resolution simulations are combined with a few high-resolution simulations to improve emulation accuracy. Next-generation telescopes (e.g., Roman space telescope) will probe the small scales with high accuracy. Thus, expensive numerical simulations running in a huge box with a high resolution are required to extract information from the incoming data, making the Bayesian parameter inference costly to perform. Multi-fidelity emulation uses many low-resolution simulations to learn the dependence of parameters while only using a few costly high-resolution simulations to calibrate the resolution. We verify our method on the matter power spectrum, showing that our emulation can achieve percent-level accuracy on average with only three high-fidelity simulations and outperform a single-fidelity emulator using 11 simulations. Our proposed emulator shows a new way to predict non-linear scales by fusing simulations from different fidelities, making the emulation development substantially more practical.
+            </td>
+        </tr>
+    </table>
+
+
+    <footer>
+        &copy; Seminar Organizers
+        &nbsp;|&nbsp; <a href="https://github.com/mikepierce/conference-website-template">Template used</a>
+    </footer>
+
+</body>
+</html>
+
