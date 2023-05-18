@@ -75,31 +75,28 @@
         <div class="w3-content">
             <div class="w3-twothird">
                 <h1>About Me</h1>
-                <h4 class="w3-padding-32">PhD Candidate in the department of Physics and Astronomy in UC Riverside.</h4>
+                <h4 class="w3-padding-32">PhD Candidate in the department of Physics and Astronomy at UC Riverside.</h4>
 
 
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I am a PhD student in the department of Physics and Astronomy at UC Riverside (2018-), working with <a href="http://sbird.github.io/">Simeon Bird</a> on <strong>various machine learning related topics in astronomy and cosmology</strong>.
-                    I currently a NASA <a href="https://astrobiology.nasa.gov/news/finesst-proposal-due-date-approaching/">FINESST</a> student, working on multi-fidelity emulators for cosmological simulations (<a href="https://insideucr.ucr.edu/awards/2021/06/23/physics-graduate-student-receives-prestigious-nasa-fellowship">Inside UCR story</a>).
+                    I am currently a PhD student in the Department of Physics and Astronomy at UC Riverside (2018-), where I collaborate with <a href="http://sbird.github.io/">Simeon Bird</a> on the implementation of machine learning techniques to calibrate resolution differences in simulations, specifically for emulation in cosmological inference.
+                    I am a recipient of the NASA <a href="https://astrobiology.nasa.gov/news/finesst-proposal-due-date-approaching/">FINESST</a> grant, and my current research focuses on developing multi-fidelity emulators for cosmological simulations, as highlighted in the <a href="https://insideucr.ucr.edu/awards/2021/06/23/physics-graduate-student-receives-prestigious-nasa-fellowship">Inside UCR story</a>.
+                    Apart from my work on cosmological simulations, I also have interests in developing detection pipelines for absorptions in quasar spectra (in collaboration with Roman Garnett from WUSTL CSE) and performing Bayesian population inference for black hole binaries (with Will Dawson from LLNL).
+                </p>
+                <p>
+                    <img src="images/MF_Analogy.png" id="me" alt="MF_Analogy" title="Slide presented in Carnegie Observatory" width=600 />
                 </p>
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I am interested in intergalactic medium, numerical cosmology, and Bayesian calibration for computer codes (emulation).
-                    I am currently working on using<strong> multi-fidelity emulation</strong> for cosmological simulations, see <a href="https://arxiv.org/abs/2105.01081">Ho-Bird-Shelton (2021)</a>.
-                    Our recent work is using multi-fidelity technique on Lyman-alpha forest, see <a href="https://arxiv.org/abs/2207.06445">Fernandez-Ho-Bird (2022)</a>.
+                    Currently, my focus is on using <strong>multi-fidelity emulation</strong> for cosmological simulations. You can find more details in the paper by Ho-Bird-Shelton (2021) available at <a href="https://arxiv.org/abs/2105.01081">arXiv:2105.01081</a>.
+                    Recently, we have applied the multi-fidelity technique to emulate Lyman-alpha forest, see Fernandez-Ho-Bird (2022) <a href="https://arxiv.org/abs/2207.06445">arXiv:2207.06445</a>.
+                    As part of my FINESST grant, I will continue utilizing multi-fidelity methods to model halo mass functions and weak lensing statistics.
+                </p>
+                <p>
+                    <img src="images/DLA_Finder.png" id="me" alt="DLA_Finder" title="Slide presented in Royal Astronomical Society: 1D ML" width=600 />
                 </p>
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I am also interested in using machine learning to model quasars emissions,
-                    the lights from supermassive black holes.
-                    I improved a <strong>Gaussian process (GP)</strong> based model (original author: <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> [<a href="https://arxiv.org/abs/1605.04460">Garnett(2017)</a>])
-                    to find <strong>damped Lyman alpha absorbers (DLAs)</strong>
-                    in the intergalactic medium with consideration of weak Lyman alpha absorptions
-                    [<a href="https://github.com/rmgarnett/gp_dla_detection/tree/master/multi_dlas">code</a>]
-                    [<a href="https://arxiv.org/abs/2003.11036">Ho-Bird-Garnett (2020)</a>].
-                    I also use the GP model to find DLAs in SDSS DR16 [<a href="https://github.com/jibanCat/gp_dla_detection_dr16q_public">code</a>]
-                    [<a href="https://github.com/jibanCat/gp_dla_detection_dr16q_public">Ho-Bird-Garnett (2021)</a>]
-                    We also performed probabilistic inference on <strong>quasar redshifts</strong> using our Gaussian process
-                    based model.
-                    [<a href="https://github.com/sbird/gp_qso_redshift">code</a>][<a href="https://arxiv.org/abs/2006.07343">Fauber et al. (2020)</a>].
+                    In addition, I have an interest in using machine learning techniques to model the emissions of quasars, which are the lights emitted by supermassive black holes. I have made improvements to a Gaussian process (GP) based model originally developed by <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> (<a href="https://arxiv.org/abs/1605.04460">arXiv:1605.04460</a>). My modifications in Ho-Bird-Garnett (2021) allow for the identification of <strong>damped Lyman alpha absorbers (DLAs)</strong> in the intergalactic medium, accounting for sub-DLAs and also include a model for a quasar meanflux model (<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036</a>, <a href="https://arxiv.org/abs/2103.10964">arXiv:2103.10964</a>).
+                    Furthermore, our research involves performing probabilistic inference on <strong>quasar redshifts</strong> using the Gaussian process based model, as detailed in the work by Fauber et al. (2020) (<a href="https://arxiv.org/abs/2006.07343">arXiv:2006.07343</a>).
                 </p>
 
                 <h4 class="w3-padding-32">Motivation</h4>
@@ -116,7 +113,7 @@
 
             <div class="w3-third w3-center">
 
-                <img src="images/Me_homeoffice.jpg" id="me" alt="Picture of Ming-Feng in my home office" title="Home office with cello suite score (the one not yet able to play!). The best thing you can do for entertainment during COVID is playing Bach suite ..." width=300 />
+                <img src="images/Me_Boston.jpeg" id="me" alt="Picture of Ming-Feng in Boston (photographer: Shen-Chang)" title="Boston ~" width=300 />
             </div>
         </div>
     </div>
