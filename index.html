@@ -84,34 +84,42 @@
                     Apart from my work on cosmological simulations, I also have interests in developing detection pipelines for absorptions in quasar spectra (in collaboration with Roman Garnett from WUSTL CSE) and performing Bayesian population inference for black hole binaries (with Will Dawson from LLNL).
                 </p>
 
+                <!-- MF-Box explain -->
+                <h4 class="w3-padding-32">MF-Box: Multi-fidelity and multi-scale emulation</h4>
+                <p>
+                    <img src="images/Nbody-plot_inverted.jpg" id="me" alt="NBody" title="Illustration for MF-Box" width=600 />
+                </p>
+                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
+                    We have extended the idea of multi-fidelity modeling and developed MF-Box (<a href="https://arxiv.org/abs/2306.03144">arXiv:2306.03144</a>), a method for modeling N-body simulations that incorporates multiple particle loads and physical scales. By using two types of cost-effective simulations, L1 and L2, we construct a model that accurately predicts summary statistics derived from the high-fidelity simulation across a wide range of cosmological parameter space. L1 simulates a low particle load in a large volume, while L2 simulates a low particle load in a small volume. By combining the simulations from different volumes, we achieve precise interpolation in a high-dimensional parameter space across scales, significantly reducing computational costs compared to running an additional high-fidelity simulation. MF-Box is versatile and can be applied to various simulation suites, providing an effective solution for interpolating simulations across multiple physical scales using affordable approximations.
+                </p>
+
+                <!-- Multi-fidelity explain -->
                 <h4 class="w3-padding-32">Multi-fidelity emulation for cosmological Simulations</h4>
                 <p>
                     <img src="images/MF_Analogy.png" id="me" alt="MF_Analogy" title="Slide presented in Carnegie Observatory" width=600 />
                 </p>
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    Currently, my focus is on using <strong>multi-fidelity emulation</strong> for cosmological simulations. You can find more details in the paper by Ho-Bird-Shelton (2021) available at <a href="https://arxiv.org/abs/2105.01081">arXiv:2105.01081</a>.
+                    The concept of multi-fidelity modeling is straightforward.
+                    We employ many inexpensive approximations to explore different parameter settings, and only rely on a handful of costly examples to improve the accuracy of those approximations.
+                    To illustrate this, consider the hiring process at a university.
+                    We have numerous graduate student workers who tackle the groundwork of exploring various research topics, while only a few professors are needed to provide guidance and refine the outputs of the students.
+                    You can find more details in the paper by Ho-Bird-Shelton (2021) available at <a href="https://arxiv.org/abs/2105.01081">arXiv:2105.01081</a>.
                     Recently, we have applied the multi-fidelity technique to emulate Lyman-alpha forest, see Fernandez-Ho-Bird (2022) <a href="https://arxiv.org/abs/2207.06445">arXiv:2207.06445</a>.
                     As part of my FINESST grant, I will continue utilizing multi-fidelity methods to model halo mass functions and weak lensing statistics.
                 </p>
-
+                <!-- DLA explain -->
                 <h4 class="w3-padding-32">Gaussian process DLA finder</h4>
                 <p>
                     <img src="images/DLA_Finder.png" id="me" alt="DLA_Finder" title="Slide presented in Royal Astronomical Society: 1D ML" width=600 />
                 </p>
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    In addition, I have an interest in using machine learning techniques to model the emissions of quasars, which are the lights emitted by supermassive black holes. I have made improvements to a Gaussian process (GP) based model originally developed by <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> (<a href="https://arxiv.org/abs/1605.04460">arXiv:1605.04460</a>). My modifications in Ho-Bird-Garnett (2021) allow for the identification of <strong>damped Lyman alpha absorbers (DLAs)</strong> in the intergalactic medium, accounting for sub-DLAs and also include a model for a quasar meanflux model (<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036</a>, <a href="https://arxiv.org/abs/2103.10964">arXiv:2103.10964</a>).
+                    I have an interest in using machine learning techniques to model the emissions of quasars, which are the lights emitted by supermassive black holes. I have made improvements to a Gaussian process (GP) based model originally developed by <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> (<a href="https://arxiv.org/abs/1605.04460">arXiv:1605.04460</a>). My modifications in Ho-Bird-Garnett (2021) allow for the identification of <strong>damped Lyman alpha absorbers (DLAs)</strong> in the intergalactic medium, accounting for sub-DLAs and also include a model for a quasar meanflux model (<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036</a>, <a href="https://arxiv.org/abs/2103.10964">arXiv:2103.10964</a>).
                     Furthermore, our research involves performing probabilistic inference on <strong>quasar redshifts</strong> using the Gaussian process based model, as detailed in the work by Fauber et al. (2020) (<a href="https://arxiv.org/abs/2006.07343">arXiv:2006.07343</a>).
                 </p>
 
                 <h4 class="w3-padding-32">Motivation</h4>
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    My research motivation comes from my enthusiasm for helping relieve people from labour-intensive works in academia.
-                    During my time pursuing higher education, I have seen countless people lose their trust in research.
-                    They were told devoting time to labour-intensive jobs was the most efficient way to produce research results for their labs.
-                    I have a strong belief that automated tools or better models can replace all repetitive works.
-                    Academia is a place for creative thinking.
-                    At least in my field, I want to help astronomers automate their works through combining physical models and machine learning.
-                    To systematically change things, I have to keep doing research on both astronomy data (e.g., Lyman alpha forest) and astrophysical simulations (e.g., MP-Gadget).
+                    My research is driven by my passion to ease the workload in academia. Over time, I have noticed many people becoming discouraged with research because they were told that spending long hours on tedious tasks was the only way to produce results. However, I strongly believe that we can use automated tools and better models to replace repetitive work, allowing academia to focus more on creative thinking.
                 </p>
             </div>
 
