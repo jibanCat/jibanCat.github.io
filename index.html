@@ -98,6 +98,15 @@
                     We have extended the idea of multi-fidelity modeling and developed MF-Box (<a href="https://arxiv.org/abs/2306.03144">arXiv:2306.03144</a>), a method for modeling N-body simulations that incorporates multiple particle loads and physical scales. By using two types of cost-effective simulations, L1 and L2, we construct a model that accurately predicts summary statistics derived from the high-fidelity simulation across a wide range of cosmological parameter space. L1 simulates a low particle load in a large volume, while L2 simulates a low particle load in a small volume. By combining the simulations from different volumes, we achieve precise interpolation in a high-dimensional parameter space across scales, significantly reducing computational costs compared to running an additional high-fidelity simulation. MF-Box is versatile and can be applied to various simulation suites, providing an effective solution for interpolating simulations across multiple physical scales using affordable approximations.
                 </p>
 
+                <!-- PRIYA simulaiton -->
+                <h4 class="w3-padding-32">PRIYA: Simulation suite for Lya forest based on Astrid simulation model</h4>
+                <p>
+                    <img src="images/PRIYA_demo.jpeg" id="me" alt="PRIYA" title="PRIYA simulation" width=600 />
+                </p>
+                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
+                    Based on the concept of multi-fidelity emulation, our research group has designed PRIYA (<a href="https://arxiv.org/abs/2306.05471">arXiv:2306.05471</a>), a multi-resolution simulation suite that spans a 9-dimensional parameter space, including cosmological and astrophysical/thermal parameters. We ran 48 low-resolution simulations with 1,536^3 particles in a 120 Mpc/h box, along with 3 high-fidelity simulations with 3,072^3 particles. These simulations include a comprehensive physics model for galaxy formation based on Astrid, including supernova and AGN feedback, resulting in a realistic population of DLAs. By combining the simulations from these 48 low-resolution simulations with the 3 high-resolution simulations, we have developed a multi-fidelity emulator that achieves interpolation with less than 1% error. This emulator provides a resource-efficient way to explore how summary statistics change based on our galaxy formation model and cosmology. Moreover, it will be used for Bayesian inference in future analysis of Lyman alpha forest data.
+                </p>
+
                 <!-- Multi-fidelity explain -->
                 <h4 class="w3-padding-32">Multi-fidelity emulation for cosmological Simulations</h4>
                 <p>
