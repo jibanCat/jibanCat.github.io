@@ -95,7 +95,7 @@
                 <!-- MF-Box explain -->
                 <h4 class="w3-padding-32">MF-Box: Multi-fidelity and multi-scale emulation</h4>
                 <p>
-                    <img src="images/Nbody-plot_inverted.jpg" id="me" alt="NBody" title="Illustration for MF-Box" width=600 />
+                    <img src="images/MF-MS-Emu.png" id="me" alt="NBody" title="Illustration for MF-Box" width=600 />
                 </p>
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
                     We have extended the idea of multi-fidelity modeling and developed MF-Box (<a href="https://arxiv.org/abs/2306.03144">arXiv:2306.03144</a>), a method for modeling N-body simulations that incorporates multiple particle loads and physical scales. By using two types of cost-effective simulations, L1 and L2, we construct a model that accurately predicts summary statistics derived from the high-fidelity simulation across a wide range of cosmological parameter space. L1 simulates a low particle load in a large volume, while L2 simulates a low particle load in a small volume. By combining the simulations from different volumes, we achieve precise interpolation in a high-dimensional parameter space across scales, significantly reducing computational costs compared to running an additional high-fidelity simulation. MF-Box is versatile and can be applied to various simulation suites, providing an effective solution for interpolating simulations across multiple physical scales using affordable approximations.
@@ -104,14 +104,25 @@
                 <!-- PRIYA simulaiton -->
                 <h4 class="w3-padding-32">PRIYA: Simulation suite for Lya forest based on Astrid simulation model</h4>
                 <p>
-                    <img src="images/PRIYA_demo.jpeg" id="me" alt="PRIYA" title="PRIYA simulation" width=600 />
+                    <img src="images/PRIYA-MF.png" id="me" alt="PRIYA" title="PRIYA simulation" width=600 />
                 </p>
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
                     Based on the concept of multi-fidelity emulation, our research group has designed PRIYA (<a href="https://arxiv.org/abs/2306.05471">arXiv:2306.05471</a>), a multi-resolution simulation suite that spans a 9-dimensional parameter space, including cosmological and astrophysical/thermal parameters. We ran 48 low-resolution simulations with 1,536^3 particles in a 120 Mpc/h box, along with 3 high-fidelity simulations with 3,072^3 particles. These simulations include a comprehensive physics model for galaxy formation based on Astrid, including supernova and AGN feedback, resulting in a realistic population of DLAs. By combining the simulations from these 48 low-resolution simulations with the 3 high-resolution simulations, we have developed a multi-fidelity emulator that achieves interpolation with less than 1% error. This emulator provides a resource-efficient way to explore how summary statistics change based on our galaxy formation model and cosmology. Moreover, it will be used for Bayesian inference in future analysis of Lyman alpha forest data.
                 </p>
 
+                <!-- DLA explain -->
+                <h4 class="w3-padding-32">Gaussian process DLA finder</h4>
+                <p>
+                    <img src="images/rainbow_dlas.png" id="me" alt="DLA_Finder" title="Slide presented in Royal Astronomical Society: 1D ML" width=600 />
+                </p>
+                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
+                    I have an interest in using machine learning techniques to model the emissions of quasars, which are the lights emitted by supermassive black holes. I have made improvements to a Gaussian process (GP) based model originally developed by <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> (<a href="https://arxiv.org/abs/1605.04460">arXiv:1605.04460</a>). My modifications in Ho-Bird-Garnett (2021) allow for the identification of <strong>damped Lyman alpha absorbers (DLAs)</strong> in the intergalactic medium, accounting for sub-DLAs and also include a model for a quasar meanflux model (<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036</a>, <a href="https://arxiv.org/abs/2103.10964">arXiv:2103.10964</a>).
+                    Furthermore, our research involves performing probabilistic inference on <strong>quasar redshifts</strong> using the Gaussian process based model, as detailed in the work by Fauber et al. (2020) (<a href="https://arxiv.org/abs/2006.07343">arXiv:2006.07343</a>).
+                </p>
+
+
                 <!-- Multi-fidelity explain -->
-                <h4 class="w3-padding-32">Multi-fidelity emulation for cosmological Simulations</h4>
+                <h4 class="w3-padding-32">Multi-fidelity emulation for cosmological simulations</h4>
                 <p>
                     <img src="images/MF_Analogy.png" id="me" alt="MF_Analogy" title="Slide presented in Carnegie Observatory" width=600 />
                 </p>
@@ -124,20 +135,12 @@
                     Recently, we have applied the multi-fidelity technique to emulate Lyman-alpha forest, see Fernandez-Ho-Bird (2022) <a href="https://arxiv.org/abs/2207.06445">arXiv:2207.06445</a>.
                     As part of my FINESST grant, I will continue utilizing multi-fidelity methods to model halo mass functions and weak lensing statistics.
                 </p>
-                <!-- DLA explain -->
-                <h4 class="w3-padding-32">Gaussian process DLA finder</h4>
-                <p>
-                    <img src="images/DLA_Finder.png" id="me" alt="DLA_Finder" title="Slide presented in Royal Astronomical Society: 1D ML" width=600 />
-                </p>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I have an interest in using machine learning techniques to model the emissions of quasars, which are the lights emitted by supermassive black holes. I have made improvements to a Gaussian process (GP) based model originally developed by <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> (<a href="https://arxiv.org/abs/1605.04460">arXiv:1605.04460</a>). My modifications in Ho-Bird-Garnett (2021) allow for the identification of <strong>damped Lyman alpha absorbers (DLAs)</strong> in the intergalactic medium, accounting for sub-DLAs and also include a model for a quasar meanflux model (<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036</a>, <a href="https://arxiv.org/abs/2103.10964">arXiv:2103.10964</a>).
-                    Furthermore, our research involves performing probabilistic inference on <strong>quasar redshifts</strong> using the Gaussian process based model, as detailed in the work by Fauber et al. (2020) (<a href="https://arxiv.org/abs/2006.07343">arXiv:2006.07343</a>).
-                </p>
-
+                
                 <h4 class="w3-padding-32">Motivation</h4>
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
                     My research is driven by my passion to ease the workload in academia. Over time, I have noticed many people becoming discouraged with research because they were told that spending long hours on tedious tasks was the only way to produce results. However, I strongly believe that we can use automated tools and better models to replace repetitive work, allowing academia to focus more on creative thinking.
                 </p>
+                
             </div>
 
             <div class="w3-third w3-center">
