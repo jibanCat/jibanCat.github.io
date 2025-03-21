@@ -76,29 +76,53 @@
             <div class="w3-twothird">
                 <h1>About Me</h1>
                 <h4 class="w3-padding-32">Postdoctoral Fellow in the Leinweber Center for Theoretical Physics (LCTP), University of Michigan -- Ann Arbor.</h4>
-
-
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I am currently a LCTP fellow working on cosmology and astrophysics using Bayesian machine learning methods.
-                    Prior to this, I was a PhD student at UC Riverside, advised by <a href="https://sbird.github.io/">Simeon Bird</a>, working on multi-fidelity machine learning techniques on cosmological galaxy formation simulations (see PRIYA-MF: <a href="https://arxiv.org/abs/2309.03943">arXiv:2309.03943</a>).
-                    I was a former Future Investigator and supported by a NASA <a href="https://astrobiology.nasa.gov/news/finesst-proposal-due-date-approaching/">FINESST</a> award (<a href="https://insideucr.ucr.edu/awards/2021/06/23/physics-graduate-student-receives-prestigious-nasa-fellowship">Inside UCR story</a>).
-                    Besides, I collaborate with <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> (WUSTL CSE) on developing Bayesian machine learning tools to find Damped Lyman-alpha (DLAs) absorbers (<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036</a>), currently used by DESI Lya analysis.
-                    Additionally, I am interested in using hierarchical population inference to analyze LIGO's GW data, shedding light on the formation channels for the binary black holes (with <a href="https://cgsr.llnl.gov/experts/fellows-past/william-dawson">Will Dawson</a> and Scott E. Perkins from LLNL).
-                    I was also a Graduate Fellow at Carnegie Observatories, working with <a href="https://www.fakhrizahedy.com">Fakhri S. Zahedy</a> to build Lyman-limit system finder, during the last year of my PhD.
-                </p>
-                <h4 class="w3-padding-32">Ongoing projects</h4>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I am currently working with Camille Avestruz (UMich) on propagating the uncertainty of blending effects (from the ML tool: <a href="https://github.com/prob-ml/bliss">BLISS</a>) to the galaxy cluster's richness-mass relation.
-                    In UMich, I expect to spend the majority of my time in DESI (primarily Lyman alpha) and LSST DESC (Cluster cosmology).
-                    Also, continuing on my previous Lyman-alpha emulator works, I am also working on using PRIYA simulations to infer cosmological parameters using P1D of KODIAQ and XQ100.
-                    Besides astrophysics, as a side project, I am spending some time working with Shang-Min Tsai (UCR) on developing Physics-informed neural net for exoplanetary atmospheres.
-                    And I spend the rest of time thinking about a new project idea for binary black holes.
-                </p>
+                <div class="w3-container" style="padding: 2%; font-size: 16px; line-height: 1.6; text-align: justify; color: #555;">
+  
+                    <p>
+                      I'm a prize fellow at the 
+                      <a href="https://lsa.umich.edu/lctp/fellows.html">Leinweber Center for Theoretical Physics (LCTP)</a>, University of Michigan, where I work on 
+                      machine learning for astrophysical and cosmological simulations, with a focus on uncertainty quantification (UQ). 
+                      My goal is to make simulations faster, smarter, and less painful, so we can actually do science instead of waiting for cluster jobs to finish.
+                    </p>
+                  
+                    <h4 class="w3-padding-16"><strong>Current Research Focus</strong></h4>
+                    <ul style="padding-left: 20px;">
+                      <li>
+                        <strong>Multi-Fidelity Emulation & UQ:</strong> Developing multi-fidelity models and variational Gaussian processes to approximate expensive simulations while keeping uncertainties in check. This lets us explore astrophysical models without spending a lifetime running full N-body simulations.
+                      </li>
+                      <li>
+                        <strong>DESI (Lyα & DLA Science):</strong> Improving the DLA detection pipeline and leading the best HI mass measurements of DLAs in DESI. The original model was Gaussian Process-based; I rewrote it in Torch so it actually runs in a useful amount of time.
+                      </li>
+                      <li>
+                        <strong>Lyα P1D Cosmology with Emulators:</strong> Using ML-driven emulation to get cosmological constraints from Lyα forest power spectra, probing the underlying dark matter density field at ~1 - 10 h/Mpc scales.
+                      </li>
+                      <!-- <li>
+                        <strong>Symbolic Regression for Knowledge Discovery:</strong> Distilling emulators into simple, interpretable equations using symbolic regression, so we can learn something meaningful instead of just trusting black-box predictions.
+                      </li> -->
+                    </ul>
+                  
+                    <h4 class="w3-padding-16"><strong>Background</strong></h4>
+                    <p>
+                      I did my PhD at UC Riverside with 
+                      <a href="https://sbird.github.io/">Simeon Bird</a>, working on multi-fidelity ML for cosmology simulations and receiving a 
+                      <a href="https://astrobiology.nasa.gov/news/finesst-proposal-due-date-approaching/">NASA FINESST</a> fellowship.
+                      During that time, I also maintained and improved the Gaussian Process-based DLA detection pipeline (with 
+                      <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a>), which is now part of DESI's DLA pipeline.
+                    </p>
+                    <p>
+                      I also worked on 
+                      Bayesian hierarchical inference for gravitational waves
+                      (with the LLNL PBH collaboration led by <a href="https://cgsr.llnl.gov/experts/fellows-past/william-dawson">Will Dawson</a>), studying the formation of binary black holes.
+                    </p>
+                    <p>
+                      Currently, I also work on photometric redshift UQ for LSST (with Camille Avestruz), making sure that when LSST measures billions of galaxy redshifts, we actually trust the results.
+                    </p>
+                  </div>
 
                 <h4 class="w3-padding-32">Animations-you-might-like</h4>
 
                 <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I believe a video is worth a million words. So instead of writing lots of words, I made some videos. There are ~6 million words below.
+                    I believe a video is worth a million words. So instead of writing lots of words, I made some videos. There are ~6 million words below :)
                 </p>
                 <p class="w3-text-grey" style="text-align: justify;padding: 3%;font-size: 16px;">
                     (Background image: Gas particles in Astrid simulation model (120 cMpc/h).)
