@@ -11,45 +11,60 @@
       font-family: sans-serif;
       margin: 2rem;
       background-color: #f9f9f9;
+      color: #333;
     }
+
     h1 {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      color: #444;
     }
+
     #controls {
       display: flex;
       align-items: center;
-      gap: 1rem;
       flex-wrap: wrap;
-      margin-bottom: 1.5rem;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
-    #param-select {
+
+    label {
+      font-weight: bold;
+    }
+
+    #param-select, #slider {
       font-size: 1rem;
     }
-    #slider {
-      flex: 1;
-      min-width: 200px;
-    }
+
     #param-value {
       font-family: monospace;
-      min-width: 200px;
+      font-size: 0.95rem;
+      color: #222;
     }
+
+    #slider {
+      width: 250px;
+      max-width: 100%;
+    }
+
     svg {
       background-color: white;
       border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
   </style>
 </head>
 <body>
-  <h1>PRIYA 1P variation: Lyα Flux Power Spectrum</h1>
+  <h1>PRIYA 1P Parameter: Lyα 1D Flux Power Spectrum</h1>
 
   <div id="controls">
-    <label for="param-select">Select Parameter:</label>
+    <label for="param-select">Parameter:</label>
     <select id="param-select"></select>
     <input id="slider" type="range" min="0" max="99" step="1" />
-    <span id="param-value">value</span>  
+    <span id="param-value">Value</span>
   </div>
 
-  <svg id="chart" width="900" height="500"></svg>
+  <svg id="chart" width="700" height="500"></svg>
 
   <script src="widget.js"></script>
 </body>
