@@ -7,8 +7,10 @@
 
 (async function () {
     const svg = d3.select("#chart");
-    const width = +svg.attr("width");
-    const height = +svg.attr("height");
+    // const width = +svg.attr("width");
+    // const height = +svg.attr("height");
+    const width = 600;  // same as viewBox width
+    const height = 500; // same as viewBox height
     const margin = { top: 20, right: 20, bottom: 50, left: 60 };
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
@@ -31,7 +33,7 @@
     const paramDescriptions = {
         "dtau0": "Slope of mean optical depth",
         "tau0": "Mean optical depth normalization",
-        "ns": "{rimeval power spectrum slope at 0.78 Mpc⁻¹",
+        "ns": "Primeval power spectrum slope at 0.78 Mpc⁻¹",
         "Ap": "Primeval power spectrum amplitude at 0.78 Mpc⁻¹",
         "herei": "Start of He II reionization",
         "heref": "End of He II reionization",
