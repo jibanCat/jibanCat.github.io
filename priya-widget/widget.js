@@ -1,4 +1,9 @@
 // widget.js — PRIYA 1P Emulator Explorer
+// // Visualization inspired by:
+//   - Observable D3: https://observablehq.com/@d3
+//   - Bollinger Bands Example: https://observablehq.com/@d3/bollinger-bands
+// And also the interactive CMB power spectra
+// https://www.redshiftzero.com/cosmowebapp/
 
 (async function () {
     const svg = d3.select("#chart");
@@ -23,6 +28,22 @@
     const slider = d3.select("#slider");
     const paramValue = d3.select("#param-value");
   
+    const paramDescriptions = {
+        "dtau0": "Slope of mean optical depth",
+        "tau0": "Mean optical depth normalization",
+        "ns": "{rimeval power spectrum slope at 0.78 Mpc⁻¹",
+        "Ap": "Primeval power spectrum amplitude at 0.78 Mpc⁻¹",
+        "herei": "Start of He II reionization",
+        "heref": "End of He II reionization",
+        "alphaq": "Quasar spectral index during HeII reionization",
+        "hub": "Hubble parameter",
+        "omegamh2": "Total matter density",
+        "hireionz": "HI reionization redshift",
+        "bhfeedback": "Black hole feedback efficiency",
+        "a_lls": "Strength of LLS correction",
+        "a_sub": "Strength of sub-DLA correction"
+      };
+
     // Populate dropdown
     select.selectAll("option")
       .data(paramNames)
@@ -48,6 +69,9 @@
       const val = sweep[idx].val;
       paramValue.text(`${param} = ${val.toExponential(2)}  (index ${idx + 1}/${sweep.length})`);
   
+      // ✅ Update param description text
+      d3.select("#param-description").text(paramDescriptions[param] || "");
+
       g.selectAll("*").remove();
   
       const allPk = sweep.flatMap(d => d.pk.flat());
@@ -103,7 +127,7 @@
         .attr("y", -45)
         .attr("fill", "black")
         .attr("text-anchor", "middle")
-        .text("P₁D [π⁻¹]");
+        .text("k P₁D π⁻¹");
   
       // Plot current sweep line for each redshift
       sweep[idx].pk.forEach((pk, zi) => {

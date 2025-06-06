@@ -55,17 +55,29 @@
   </style>
 </head>
 <body>
-  <h1>PRIYA 1P Parameter: Lyα 1D Flux Power Spectrum</h1>
-
+<div style="text-align: center; max-width: 750px; margin: 0 auto 2rem auto;">
+    <h1 style="margin-bottom: 0.5rem;">PRIYA 1P variation: Lyα Flux Power Spectrum</h1>
+    <p>
+        The predicted 1D flux power spectrum (P₁D) from the <a href="https://arxiv.org/abs/2306.05471">PRIYA</a> emulator, 
+        as a function <em>k [s/km]</em> for different redshifts. 
+        These are the Fourier transforms of the 1D sightlines of neutral hydrogen absorptions, which naturally include the peculiar velocities and hydrodynamics of the intergalactic medium (IGM).
+        Use the dropdown to select a physical parameter and explore how variations affect P₁D across redshift bins z = 2.6-4.2.
+        The widget inspired by <a href="https://www.redshiftzero.com/cosmowebapp/">this CMB widget</a> and <a href="https://observablehq.com/@d3/bollinger-bands/2">d3 example</a>.
+    </p>
+    
   <div id="controls">
     <label for="param-select">Parameter:</label>
     <select id="param-select"></select>
     <input id="slider" type="range" min="0" max="99" step="1" />
     <span id="param-value">Value</span>
+    <div id="param-description" style="font-size: 0.9rem; color: #444;"></div>
   </div>
 
   <svg id="chart" width="700" height="500"></svg>
 
   <script src="widget.js"></script>
+
+</div>
+
 </body>
 </html>
