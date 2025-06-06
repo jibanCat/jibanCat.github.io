@@ -1,0 +1,54 @@
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    margin: 40px;
+    background-color: #fdfdfd;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #2c3e50;
+  }
+  
+  #controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  #parameter-select {
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  #slider-container {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+  }
+  
+  #slider-value {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+  #plot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  svg {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }

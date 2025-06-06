@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PRIYA Emulator: 1P Sweep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    #controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    #param-select {
+      font-size: 1rem;
+    }
+    #slider {
+      flex: 1;
+      min-width: 200px;
+    }
+    #param-value {
+      font-family: monospace;
+      min-width: 200px;
+    }
+    svg {
+      background-color: white;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>PRIYA 1P variation: Lyα Flux Power Spectrum</h1>
+
+  <div id="controls">
+    <label for="param-select">Select Parameter:</label>
+    <select id="param-select"></select>
+    <input id="slider" type="range" min="0" max="99" step="1" />
+    <span id="param-value">value</span>  
+  </div>
+
+  <svg id="chart" width="900" height="500"></svg>
+
+  <script src="widget.js"></script>
+</body>
+</html>
