@@ -1,256 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<title>Ming-Feng Ho</title>
-<meta charset="UTF-8">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-<link rel="stylesheet" href="style.css" type="text/css"/>
-
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Lato", sans-serif
-    }
-
-    .w3-bar,
-    h1,
-    button {
-        font-family: "Montserrat", sans-serif
-    }
-
-    .fa-anchor,
-    .fa-coffee {
-        font-size: 200px
-    }
-</style>
-
+<title>Ming-Feng Ho</title>
+<meta name="description" content="Ming-Feng Ho. Lyα forest cosmology, dense absorbers and cosmological inference. Postdoctoral fellow, University of Michigan.">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
 <body>
 
-    <!-- Navbar -->
-    <div class="w3-top">
-        <div class="w3-bar w3-grey w3-card w3-left-align w3-large">
-                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-grey" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-                <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-                        <a href="pub.html"
-                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Publications</a>
-            <a href="https://jibancat.github.io/cv.pdf"
-                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">CV</a>
-            <a href="https://github.com/jibancat/"
-                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">GitHub</a>
-            <a href="https://sbird.github.io/group.html"
-                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">BirdGroup</a>
-            <!-- <a href="https://profiles.ucr.edu/mingfeng.ho"
-                class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">R'Profile</a> -->
-            <a href="others.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Others</a>
-        </div>
+<a class="skip-link" href="#research">Skip to the research</a>
 
-        <!-- Navbar on small screens -->
-        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-                <a href="pub.html" class="w3-bar-item w3-button w3-padding-large">Publications</a>
-                <a href="https://jibancat.github.io/cv.pdf" class="w3-bar-item w3-button w3-padding-large">CV</a>
-                <a href="https://github.com/jibancat/" class="w3-bar-item w3-button w3-padding-large">GitHub</a>
-                <a href="https://sbird.github.io/group.html" class="w3-bar-item w3-button w3-padding-large">BirdGroup</a>
-                <!-- <a href="https://profiles.ucr.edu/mingfeng.ho" class="w3-bar-item w3-button w3-padding-large">R'Profile</a> -->
-                <a href="others.html" class="w3-bar-item w3-button w3-padding-large">Others</a>
+<header class="site-header">
+  <a class="mark" href="#top">Ming-Feng Ho</a>
+  <nav>
+    <a href="#research" data-section="research">Research</a>
+    <a href="#projects" data-section="projects">Projects</a>
+    <a href="#play" data-section="play">Play</a>
+    <a href="#papers" data-section="papers">Papers</a>
+    <a href="#about" data-section="about">About</a>
+    <span class="sep"></span>
+    <details class="hdr-menu">
+      <summary aria-label="Sections and professional links">Menu</summary>
+      <div class="panel">
+        <a class="sec" href="#research">Research</a>
+        <a class="sec" href="#projects">Projects</a>
+        <a class="sec" href="#play">Play</a>
+        <a class="sec" href="#papers">Papers</a>
+        <a class="sec" href="#about">About</a>
+        <div class="rule"></div>
+        <a href="cv/">CV</a>
+        <a href="https://scholar.google.com/citations?user=gF5V0LUAAAAJ&hl=en">Scholar ↗</a>
+        <a href="https://orcid.org/0000-0002-4457-890X">ORCID ↗</a>
+        <a href="https://github.com/jibancat/">GitHub ↗</a>
+      </div>
+    </details>
+  </nav>
+</header>
 
-        </div>
-    </div>
 
-    <!-- Header -->
-    <header class="w3-container w3-center" style="padding:100px 20px; min-height: 100%; background-image: url('images/webiste_lya_plot_small.jpeg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
-        <h1 class="w3-margin w3-jumbo" style="color: white;">Ming-Feng Ho</h1>
-        <p class="w3-xlarge" style="color: white;">LITP Fellow</p>
-    </header>
-
-    <!-- First Grid -->
-    <div class="w3-row-padding w3-padding-62 w3-container">
-        <div class="w3-content">
-            <div class="w3-twothird">
-                <h1>About Me</h1>
-                <h4 class="w3-padding-32">Postdoctoral Fellow in the Leinweber Institute for Theoretical Physics (LITP), University of Michigan -- Ann Arbor.</h4>
-                <div class="w3-container" style="padding: 2%; font-size: 16px; line-height: 1.6; text-align: justify; color: #555;">
+<section id="hero" aria-label="Core Sample: an interactive simulated Lyman-alpha forest field, read one sightline at a time">
   
-                    <p>
-                      I'm a prize fellow at the 
-                      <a href="https://lsa.umich.edu/lctp/fellows.html">Leinweber Institute for Theoretical Physics (LITP)</a>, University of Michigan, where I work on 
-                      small-scale Lyman alpha forest cosmology, machine learning and uncertainty quantification (UQ).
-                      Theorist by training,
-                      I work on the intersection between data and simulations, but I guess I ended up thinking more data than simulations these days.
-                      <!-- machine learning for astrophysical and cosmological simulations, with a focus on uncertainty quantification (UQ).  -->
-                      <!-- My goal is to make simulations faster, smarter, and less painful, so we can actually do science instead of waiting for cluster jobs to finish. -->
-                    </p>
-                  
-                    <h4 class="w3-padding-16"><strong>Current Research Focus</strong></h4>
-                    <ul style="padding-left: 20px;">
-                      <li>
-                        <strong>Lyα P1D Cosmology with Emulators:</strong> Using ML-driven emulation with a suite of hydrodynamical simulations to get cosmological constraints from Lyα forest, probing the underlying dark matter density field at ~1 - 10 h/Mpc scales.
-                      </li>
-                      <li>
-                        <strong>Multi-Fidelity Emulation & UQ:</strong> Developing multi-fidelity models to approximate expensive simulations while keeping uncertainties in check. This lets us explore astrophysical models without spending a lifetime running full N-body simulations.
-                      </li>
-                      <li>
-                        <strong>DESI (Lyα & DLA Science):</strong> Improving the DLA detection pipeline, trying to figure out how to detect them better, statistically.
-                      </li>
-                      <!-- <li>
-                        <strong>Symbolic Regression for Knowledge Discovery:</strong> Distilling emulators into simple, interpretable equations using symbolic regression, so we can learn something meaningful instead of just trusting black-box predictions.
-                      </li> -->
-                    </ul>
-                  
-                    <h4 class="w3-padding-16"><strong>Background</strong></h4>
-                    <p>
-                      I did my PhD at UC Riverside with 
-                      <a href="https://sbird.github.io/">Simeon Bird</a>, working on multi-fidelity ML for cosmology simulations and receiving a 
-                      <a href="https://astrobiology.nasa.gov/news/finesst-proposal-due-date-approaching/">NASA FINESST</a> fellowship.
-                      During that time, I also maintained and improved the Gaussian Process-based DLA model (with 
-                      <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a>), which is now part of DESI's DLA pipeline.
-                    </p>
-                    <p>
-                      I also worked on 
-                      Bayesian hierarchical inference for gravitational waves
-                      (with the LLNL PBH collaboration led by <a href="https://cgsr.llnl.gov/experts/fellows-past/william-dawson">Will Dawson</a>), studying the formation of binary black holes.
-                    </p>
-                    <p>
-                      Currently, I also work on photometric redshift UQ for LSST (with Camille Avestruz), making sure that when LSST measures billions of galaxy redshifts, we actually trust the results.
-                    </p>
-                  </div>
-
-                <h4 class="w3-padding-32">Animations-you-might-like</h4>
-
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I believe a video is worth a million words. So instead of writing lots of words, I made some videos. There are ~6 million words below :)
-                </p>
-                <p class="w3-text-grey" style="text-align: justify;padding: 3%;font-size: 16px;">
-                    (Background image: Gas particles in Astrid simulation model (120 cMpc/h).)
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xBZLH14Qzyo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
-
-                <p class="w3-text-grey" style="text-align: justify;padding: 3%;font-size: 16px;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4ccwRtn-NTQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
-
-                <p class="w3-text-grey" style="text-align: justify;padding: 3%;font-size: 16px;">
-                    (Demo: Multi-fidelity emulation in 1D toy data (See <a href="https://github.com/jibanCat/nargp_tensorflow">jibanCat/nargp_tensorflow</a>).)
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tQIytDnWOzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
-
-                <p class="w3-text-grey" style="text-align: justify;padding: 3%;font-size: 16px;">
-                    (Demo: Bayesian optimization demo, with an increasing observational noise.)
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6JmuqVhSq5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
-
-                <p class="w3-text-grey" style="text-align: justify;padding: 3%;font-size: 16px;">
-                    (Demo: Inferring quasar redshift using a data-driven Gaussian process (<a href="https://arxiv.org/abs/2006.07343">2006.07343</a>).)
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NhUycNaHBzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
-
-                <p class="w3-text-grey" style="text-align: justify;padding: 3%;font-size: 16px;">
-                    (Demo: Inferring damped Lyman alphas absorption (DLAs, typically neutral hydrogen gas around high-z dwarf galaxies) using Gaussian processes and Bayesian model selection (<a href="https://arxiv.org/abs/2003.11036">2003.11036</a>).)
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mv0Z2xABNGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </p>
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <canvas id="field2d" aria-hidden="true" hidden></canvas>
+  <canvas id="c"></canvas>
+</section>
 
 
-                <!-- MF-Box explain -->
-                <h4 class="w3-padding-32">MF-Box: Multi-fidelity and multi-scale emulation</h4>
-                <p>
-                    <img src="images/MF-MS-Emu.png" id="me" alt="NBody" title="Illustration for MF-Box" width=600 />
-                </p>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    We have extended the idea of multi-fidelity modeling and developed MF-Box (<a href="https://arxiv.org/abs/2306.03144">arXiv:2306.03144</a>), a method for modeling N-body simulations that incorporates multiple particle loads and physical scales. By using two types of cost-effective simulations, L1 and L2, we construct a model that accurately predicts summary statistics derived from the high-fidelity simulation across a wide range of cosmological parameter space. L1 simulates a low particle load in a large volume, while L2 simulates a low particle load in a small volume. By combining the simulations from different volumes, we achieve precise interpolation in a high-dimensional parameter space across scales, significantly reducing computational costs compared to running an additional high-fidelity simulation. MF-Box is versatile and can be applied to various simulation suites, providing an effective solution for interpolating simulations across multiple physical scales using affordable approximations.
-                </p>
+<div class="band" aria-hidden="true">
+  <canvas id="band" aria-hidden="true"></canvas>
+  <div class="band-caption">the same field, thinned · every row still a sightline · simulated (PRIYA)</div>
+</div>
 
-                <!-- PRIYA simulaiton -->
-                <!-- <h4 class="w3-padding-32">PRIYA: Simulation suite for Lya forest based on Astrid simulation model</h4>
-                <p>
-                    <img src="images/PRIYA-MF.png" id="me" alt="PRIYA" title="PRIYA simulation" width=600 />
-                </p>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    Based on the concept of multi-fidelity emulation, our research group has designed PRIYA (<a href="https://arxiv.org/abs/2306.05471">arXiv:2306.05471</a>), a multi-resolution simulation suite that spans a 9-dimensional parameter space, including cosmological and astrophysical/thermal parameters. We ran 48 low-resolution simulations with 1,536^3 particles in a 120 Mpc/h box, along with 3 high-fidelity simulations with 3,072^3 particles. These simulations include a comprehensive physics model for galaxy formation based on Astrid, including supernova and AGN feedback, resulting in a realistic population of DLAs. By combining the simulations from these 48 low-resolution simulations with the 3 high-resolution simulations, we have developed a multi-fidelity emulator that achieves interpolation with less than 1% error. This emulator provides a resource-efficient way to explore how summary statistics change based on our galaxy formation model and cosmology. Moreover, it will be used for Bayesian inference in future analysis of Lyman alpha forest data.
-                </p> -->
-
-                <!-- DLA explain -->
-                <h4 class="w3-padding-32">Gaussian process DLA finder</h4>
-                <p>
-                    <img src="images/RdBu_dlas.png" id="me" alt="DLA_Finder" title="Slide presented in Royal Astronomical Society: 1D ML" width=600 />
-                </p>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    I have an interest in using machine learning techniques to model the emissions of quasars, which are the lights emitted by supermassive black holes. I have made improvements to a Gaussian process (GP) based model originally developed by <a href="https://www.cse.wustl.edu/~garnett/">Roman Garnett</a> (<a href="https://arxiv.org/abs/1605.04460">arXiv:1605.04460</a>). My modifications in Ho-Bird-Garnett (2021) allow for the identification of <strong>damped Lyman alpha absorbers (DLAs)</strong> in the intergalactic medium, accounting for sub-DLAs and also include a model for a quasar meanflux model (<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036</a>, <a href="https://arxiv.org/abs/2103.10964">arXiv:2103.10964</a>).
-                    Furthermore, our research involves performing probabilistic inference on <strong>quasar redshifts</strong> using the Gaussian process based model, as detailed in the work by Fauber et al. (2020) (<a href="https://arxiv.org/abs/2006.07343">arXiv:2006.07343</a>).
-                </p>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    (Thanks Yongda Zhu for sharing the awesome XQR-30 image made by Dr. Anna-Christina Eilers, which I used it as a reference to make the above DLA figure.)
-                </p>
+<main id="top">
 
 
-                <!-- Multi-fidelity explain -->
-                <h4 class="w3-padding-32">Multi-fidelity emulation for cosmological simulations</h4>
-                <p>
-                    <img src="images/MF_Analogy.png" id="me" alt="MF_Analogy" title="Slide presented in Carnegie Observatory" width=600 />
-                </p>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    The concept of multi-fidelity modeling is straightforward.
-                    We employ many inexpensive approximations to explore different parameter settings, and only rely on a handful of costly examples to improve the accuracy of those approximations.
-                    To illustrate this, consider the hiring process at a university.
-                    We have numerous graduate student workers who tackle the groundwork of exploring various research topics, while only a few professors are needed to provide guidance and refine the outputs of the students.
-                    You can find more details in the paper by Ho-Bird-Shelton (2021) available at <a href="https://arxiv.org/abs/2105.01081">arXiv:2105.01081</a>.
-                    Recently, we have applied the multi-fidelity technique to emulate Lyman-alpha forest, see Fernandez-Ho-Bird (2022) <a href="https://arxiv.org/abs/2207.06445">arXiv:2207.06445</a>.
-                    As part of my FINESST grant, I will continue utilizing multi-fidelity methods to model halo mass functions and weak lensing statistics.
-                </p>
-                
-                <h4 class="w3-padding-32">Motivation</h4>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    My research is driven by my passion to ease the workload in academia. Over time, I have noticed many people becoming discouraged with research because they were told that spending long hours on tedious tasks was the only way to produce results. However, I strongly believe that we can use automated tools and better models to replace repetitive work, allowing academia to focus more on creative thinking.
-                </p>
-                
-                <!-- <h4 class="w3-padding-32">Motivation (Updated)</h4>
-                <p class="w3-text-grey" style="text-align: justify;padding: 2%;font-size: 16px;">
-                    Okay, the original motivation was written like 2016 and way before the AI/LLM takes over the academia. The situation does not really get better, I guess people are just using AI to get themselves busier and repetitively publishing more things.
-
-                </p> -->
-            </div>
-
-            <div class="w3-third w3-center">
-
-                <img src="images/Me_Boston.jpeg" id="me" alt="Picture of Ming-Feng in Boston" title="Boston ~" width=300 />
-            </div>
-        </div>
+<section id="research" class="chapter">
+  <div class="col">
+    <div class="chapter-head">
+      <div><div class="num">01 · RESEARCH</div><canvas class="strip" data-row="239" aria-hidden="true"></canvas></div>
+      <div>
+        <h2>From quasar light to small-scale structure</h2>
+        <p class="lede">Light from a distant quasar crosses the cosmic web before it reaches us. Diffuse hydrogen follows its filaments and sheets, absorbing the light at different wavelengths. Together, these absorption features form what we call the Lyα forest. The field above is one simulated slice of this web, with each row a sightline through it.</p>
+        <p class="lede">The forest lets us probe very small scales. A running primordial spectrum changes how much structure is seeded on different scales, while warm dark matter can suppress the smallest structures.</p>
+      </div>
     </div>
-    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-        <h1 class="w3-margin w3-xlarge"><p>“To the Bayesian all things are Bayesian.”</p>
-            -  <small>Good Thinking: The Foundations of Probability and Its Applications.</small></h1>
+
+    <div class="themes">
+      <article class="theme">
+        <canvas class="rv" data-fig="research" data-state="one" aria-hidden="true"></canvas>
+        <h3>One sightline</h3>
+        <p>Follow one row across the field and it becomes a spectrum. Most of the absorption comes from the diffuse hydrogen that makes up the forest. Sometimes the sightline crosses much denser neutral hydrogen in and around galaxies, producing broad damping wings that can cover a large part of the spectrum.</p>
+        <p>These dense absorbers are often difficult to see directly in emission. Against a bright quasar, however, their absorption lets us probe neutral gas in and around galaxies that would otherwise be hard to see. Measuring them means inferring the quasar light hidden beneath the damping wings, together with the absorber's redshift and column density. Across many quasars, those inferences constrain the absorber population.</p>
+      </article>
+      <article class="theme">
+        <canvas class="rv" data-fig="research" data-state="many" aria-hidden="true"></canvas>
+        <h3>Many sightlines</h3>
+        <p>Keep enough sightlines and the ξ curve above begins to develop structure. The individual absorption lines fade from view, but their correlations remain. Those correlations contain information about the small-scale clustering of matter, as well as the thermal state of the gas.</p>
+        <p>Simulations connect forest statistics to small-scale matter power.</p>
+      </article>
+      <article class="theme">
+        <canvas class="rv" data-fig="research" data-state="dense" aria-hidden="true"></canvas>
+        <h3>The dense absorbers return</h3>
+        <p>Dense absorbers are rare, but their broad damping wings still affect forest statistics after many sightlines are combined. Changes in the absorber population can shift the same statistics used for cosmology, sometimes in ways that resemble changes in small-scale matter power.</p>
+        <p>Their population therefore enters the cosmological likelihood.</p>
+      </article>
     </div>
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-        <div class="w3-xlarge w3-padding-32">
-            <h5>Social Media</h5>
-            <a href="https://www.linkedin.com/in/ming-feng-ho-a20431121"><i
-                    class="fab fa-linkedin w3-hover-opacity"></i></a>
-            <a href="https://www.researchgate.net/profile/Ming-Feng-Ho"><i
-                class="fab fa-researchgate w3-hover-opacity"></i></a> 
-            <a href="https://www.facebook.com/airofthehouse"><i
-                class="fab fa-facebook w3-hover-opacity"></i></a> 
-            <h6><a href="mailto: mfho@umich.edu">Email Me</a></h6>
+
+    
+    <aside class="bayes">
+      <div class="k">BAYESIAN INFERENCE</div>
+      <div>
+        <p class="expr">posterior ∝ prior × likelihood</p>
+        <div class="terms">
+          <div><canvas class="vig" data-fig="bayes" data-state="prior" aria-hidden="true"></canvas><span class="t">prior</span>our beliefs about what is plausible before seeing the data</div>
+          <div><canvas class="vig" data-fig="bayes" data-state="likelihood" aria-hidden="true"></canvas><span class="t">likelihood</span>how well each possibility predicts the data</div>
+          <div><canvas class="vig" data-fig="bayes" data-state="posterior" aria-hidden="true"></canvas><span class="t">posterior</span>our updated beliefs after seeing the data</div>
         </div>
-    </footer>
+      </div>
+    </aside>
 
-    <script>
-        // Used to toggle the menu on small screens when clicking on the menu button
-        function myFunction() {
-          var x = document.getElementById("navDemo");
-          if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-          } else {
-            x.className = x.className.replace(" w3-show", "");
-          }
-        }
-    </script>
+    <div class="thread">
+      <div class="k"></div>
+      <p><span class="chain"><span>light → forest → sightlines →</span> <span>statistics → matter power</span></span></p>
+    </div>
+  </div>
+</section>
 
+
+<section id="projects" class="chapter">
+  <div class="col">
+    <div class="chapter-head">
+      <div><div class="num">02 · PROJECTS</div><canvas class="strip" data-row="101" aria-hidden="true"></canvas></div>
+      <div>
+        <h2>Selected work</h2>
+      </div>
+    </div>
+
+    <div class="projects">
+
+      
+      <article class="project lead">
+        <div>
+          <span class="pv"><canvas data-fig="field" data-box="120,400,120,1300" data-sil="239" aria-label="A simulated hydrogen field with one sightline extracted and shown as a spectrum"></canvas><span class="credit">a sightline read from the field · simulated · PRIYA</span></span>
+        </div>
+        <div>
+          <div class="meta"><span>Small-scale cosmology</span><span>JCAP 2026</span></div>
+          <h3>Small-scale Lyα cosmology with high-resolution spectra</h3>
+          <p class="what">High-resolution quasar spectra resolve the Lyα forest out to wavenumbers of order k ~ 10 h Mpc^-1, smaller scales than those usually used in cosmological analyses. Using KODIAQ-SQUAD and XQ-100, we constrain the amplitude and slope of the small-scale matter power spectrum.</p>
+          <p class="result">The amplitude is consistent with DESI DR1 and Planck; the inferred slope is somewhat higher.</p>
+          <div class="links"><a href="https://arxiv.org/abs/2509.18271">arXiv ↗</a><a href="https://doi.org/10.1088/1475-7516/2026/07/094">JCAP 07 (2026) 094 ↗</a></div>
+          <details>
+            <summary><span>How it works</span></summary>
+            <dl>
+              <dt>Spectra</dt><dd>KODIAQ-SQUAD and XQ-100</dd>
+              <dt>Model</dt><dd>PRIYA multi-fidelity emulators, with dense absorbers included in the likelihood</dd>
+              <dt>Inference</dt><dd>Small-scale matter-power amplitude and slope</dd>
+            </dl>
+          </details>
+        </div>
+      </article>
+
+      
+      <article class="project">
+        <span class="pv"><canvas data-fig="gp" aria-label="A synthetic quasar spectrum with a damped absorber, overlaid by the inferred unabsorbed quasar spectrum"></canvas><span class="credit">synthetic · illustrative</span></span>
+        <div class="meta"><span>Absorbers · inference</span><span>2020 → DESI</span></div>
+        <h3>Finding damped absorbers automatically</h3>
+        <p class="what">Some sightlines contain more than the diffuse forest. A dense, self-shielded neutral-hydrogen system can remove enough quasar light to strongly affect downstream analyses. That is why we need a DLA finder.</p>
+        <p class="result">Rather than making only a yes-or-no detection, it keeps a posterior over the absorber's redshift and column density. It is now one of the complementary finders used for the DESI DR2 DLA catalogue.</p>
+        <div class="links"><a href="https://arxiv.org/abs/2003.11036">DR12 ↗</a><a href="https://arxiv.org/abs/2103.10964">DR16Q ↗</a><a href="https://arxiv.org/abs/2503.14740">DESI DR2 ↗</a><a href="https://github.com/jibancat/gp_dla_finder">code ↗</a></div>
+        <details>
+          <summary><span>How it works</span></summary>
+            <dl>
+            <dt>Missing light</dt><dd>Infer the unabsorbed quasar continuum with a Gaussian process</dd>
+            <dt>Absorbers</dt><dd>Compare models with zero, one, or more systems</dd>
+            <dt>Output</dt><dd>Posterior over redshift and column density</dd>
+          </dl>
+          <p class="note">From SDSS DR12 to DR16Q and now DESI DR2.</p>
+        </details>
+      </article>
+
+      
+      <article class="project">
+        <span class="pv"><canvas data-fig="fidelity" data-row="239" data-c0="380" data-c1="900" aria-label="The same simulated sightline shown at progressively finer resolution from left to right, ending at full detail."></canvas><span class="credit">one sightline, resolution rising · simulated · PRIYA</span></span>
+        <div class="meta"><span>Emulation · uncertainty</span><span>2022 – 2023</span></div>
+        <h3>Multi-fidelity emulation</h3>
+        <p class="what">High-resolution cosmological simulations are expensive, so there are never enough of them to densely cover the parameter space needed for inference. Multi-fidelity emulation combines many lower-resolution simulations with a smaller number of high-resolution runs and learns the correction between them.</p>
+        <p class="what">This lets the emulator use information from both resolutions without treating the lower-resolution simulations as exact.</p>
+        <div class="links"><a href="https://arxiv.org/abs/2105.01081">MF emulator ↗</a><a href="https://arxiv.org/abs/2306.03144">MF-Box ↗</a><a href="https://arxiv.org/abs/2207.06445">forest ↗</a><a href="https://github.com/jibanCat/matter_emu_mfbox">code ↗</a><a href="https://www.youtube.com/watch?v=tQIytDnWOzk">watch the method ↗</a></div>
+        <details>
+          <summary><span>How it works</span></summary>
+          <p class="note">Learn the low-to-high-fidelity correction as part of the Gaussian-process model.</p>
+          <p class="note">First used for matter power, then extended to the Lyα forest.</p>
+        </details>
+      </article>
+
+      
+      <article class="project">
+        <span class="pv"><canvas data-fig="form" data-both="1" aria-label="The same Lyman-alpha forest statistic for sightlines with and without a dense absorber"></canvas><span class="credit">simulated · PRIYA</span></span>
+        <div class="meta"><span>Dense absorbers · emulation</span><span>in preparation</span></div>
+        <h3>What dense absorbers do to the Lyα forest</h3>
+        <p class="what">Even a small number of dense absorbers can change forest statistics through their broad damping wings. Changing the absorber population changes those statistics as well, sometimes in ways that resemble changes in small-scale matter power.</p>
+        <p class="what">HCDEmu models this dependence by emulating how the forest responds to different absorber populations. That response then enters the likelihood.</p>
+        <div class="links"><a href="https://github.com/jibancat/hcd_priya">hcd_priya ↗</a></div>
+        <details>
+          <summary><span>How it works</span></summary>
+          <p class="note">Split PRIYA synthetic spectra by absorber class and emulate each class's response.</p>
+          <p class="note">The change in ξ when you kept a dense sightline above is the same effect in a simpler setting.</p>
+        </details>
+      </article>
+
+      
+      <article class="project coda">
+        <span class="pv"><canvas data-fig="ask" data-ask="One population, or two?" aria-label="A typographic question asking whether the black holes are described by one population or two"></canvas></span>
+        <div class="meta"><span>Population inference</span><span>PRD 2024</span></div>
+        <h3>One population of black holes, or two?</h3>
+        <p class="what">GWTC-3 has a very different population-inference problem. The objects are merging black holes rather than absorbers, but the inference is again about a population rather than a single object.</p>
+        <p class="what">Using hierarchical population inference, we constrained how much two proposed black-hole populations could mix.</p>
+        <div class="links"><a href="https://arxiv.org/abs/2408.09024">arXiv ↗</a><a href="https://doi.org/10.1103/PhysRevD.110.063031">PRD 110, 063031 ↗</a></div>
+        <details>
+          <summary><span>How it works</span></summary>
+          <p class="note">Hierarchical population inference on GWTC-3.</p>
+          <p class="note">Related work includes microlensing searches for primordial black holes.</p>
+        </details>
+      </article>
+    </div>
+
+    <details class="more-work">
+      <summary><span>More work</span></summary>
+      <ul class="more-list">
+        <li><span class="t"><a href="https://arxiv.org/abs/2306.05471">PRIYA: a suite of Lyα forest simulations ↗</a></span><span class="d">The PRIYA simulations behind much of the artwork above were led by Simeon Bird. The field at the top of this page is one slice from a PRIYA box. <a href="https://jibancat.github.io/priya-widget/">Parameter sweep ↗</a> · <a href="https://www.youtube.com/watch?v=4ccwRtn-NTQ">watch the render ↗</a> · <a href="https://arxiv.org/abs/2309.03943">eBOSS constraints ↗</a></span></li>
+        <li><span class="t"><a href="https://jibancat.github.io/priya-widget/">PRIYA P1D parameter sweep ↗</a></span><span class="d">Move any of thirteen cosmological and astrophysical parameters and watch the forest power change.</span></li>
+        <li><span class="t">Neural-network emulators and the Goku suite</span><span class="d">Nonlinear matter-power emulation and simulations beyond ΛCDM, with Yanhui Yang and Simeon Bird. <a href="https://arxiv.org/abs/2507.07177">emulator ↗</a> · <a href="https://arxiv.org/abs/2501.06296">Goku ↗</a></span></li>
+        <li><span class="t"><a href="https://arxiv.org/abs/2305.00023">C IV absorbers in SDSS DR12 ↗</a></span><span class="d">Machine learning applied to a different absorption line, in work led by Reza Monadi.</span></li>
+        <li><span class="t"><a href="https://arxiv.org/abs/2006.07343">Quasar redshifts from a Gaussian process ↗</a></span><span class="d">Redshift inference using the same quasar emission model behind the absorber finder.</span></li>
+        <li><span class="t"><a href="https://arxiv.org/abs/2312.13249">Primordial-black-hole microlensing ↗</a></span><span class="d">Collaborative work with the LLNL group on what Roman and ground-based surveys could see.</span></li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+
+<section id="play" class="chapter">
+  <div class="col">
+    <div class="chapter-head">
+      <div><div class="num">03 · PLAY</div></div>
+      <div>
+        <h2>Play</h2>
+      </div>
+    </div>
+
+    <div class="play-stage">
+      <div class="play-board"><div class="tag">PRIOR → OBSERVE → POSTERIOR · illustration on a toy model</div><canvas id="play-board" aria-hidden="true"></canvas></div>
+      <div class="play-text">
+        <h3>Cosmic Battleship</h3>
+        <p>There is a universe you cannot see, and ten chances to look at it. Each sightline gives you a noisy piece of the map. After every observation, some possibilities become more likely and others fade away, and you have to decide where to look next.</p>
+        <p>The opponent is doing the same thing.</p>
+        <p>A second mode uses absorption lines instead of a map. Sometimes the data identify the answer. Sometimes they do not.</p>
+        <p style="font-size:14px; color:#8FA0B4">A concept game designed for a science exhibit. The model underneath it is simple enough to check by hand.</p>
+        <div class="facts">status · prototype<br>stack · web, no backend</div>
+        <span class="btn is-pending" aria-disabled="true">Not yet public</span>
+        <p style="margin-top:14px; font-size:12.5px; color:#8FA0B4"></p>
+        <p style="margin-top:22px; font-size:14px; color:#8FA0B4">Also playable: <a href="https://jibancat.github.io/priya-widget/" style="color:#DCEBF6; border-bottom:1px solid #5B6B7C">the PRIYA parameter sweep ↗</a>, a small live widget: move a cosmological or astrophysical parameter and watch the forest power spectrum respond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="papers" class="chapter">
+  <div class="col">
+    <div class="chapter-head">
+      <div><div class="num">04 · PAPERS</div><canvas class="strip" data-row="418" aria-hidden="true"></canvas></div>
+      <div>
+        <h2>Papers</h2>
+        <p class="lede">First-author work first. Full list below.</p>
+      </div>
+    </div>
+
+    <ol class="papers">
+      <li class="paper first"><div class="year">2026</div>
+        <div><div class="title"><a href="https://arxiv.org/abs/2509.18271">Small-scale Lyman-alpha forest cosmology with PRIYA: constraints from XQ-100 and KODIAQ-SQUAD one-dimensional flux power spectra</a></div>
+        <div class="authors"><b>M.-F. Ho</b>, M. Qezlou, S. Bird, Y. Yang, C. Avestruz, M. A. Fernandez, V. Iršič</div></div>
+        <div class="venue">JCAP 07 (2026) 094 ·&nbsp;<a href="https://arxiv.org/abs/2509.18271">arXiv:2509.18271</a></div></li>
+      <li class="paper first"><div class="year">2024</div>
+        <div><div class="title"><a href="https://arxiv.org/abs/2408.09024">Investigating the mixing between two black hole populations in LIGO-Virgo-KAGRA GWTC-3</a></div>
+        <div class="authors"><b>M.-F. Ho</b>, S. E. Perkins, S. Bird, W. Dawson, N. Golovich, J. R. Lu, P. McGill</div></div>
+        <div class="venue">Phys. Rev. D 110, 063031 ·&nbsp;<a href="https://arxiv.org/abs/2408.09024">arXiv:2408.09024</a></div></li>
+      <li class="paper first"><div class="year">2023</div>
+        <div><div class="title"><a href="https://arxiv.org/abs/2306.03144">MF-Box: multi-fidelity and multi-scale emulation for the matter power spectrum</a></div>
+        <div class="authors"><b>M.-F. Ho</b>, S. Bird, M. A. Fernandez, C. R. Shelton</div></div>
+        <div class="venue">MNRAS 526, 2903 ·&nbsp;<a href="https://arxiv.org/abs/2306.03144">arXiv:2306.03144</a></div></li>
+      <li class="paper first"><div class="year">2022</div>
+        <div><div class="title"><a href="https://arxiv.org/abs/2105.01081">Multi-fidelity emulation for the matter power spectrum using Gaussian processes</a></div>
+        <div class="authors"><b>M.-F. Ho</b>, S. Bird, C. R. Shelton</div></div>
+        <div class="venue">MNRAS 509, 2551 ·&nbsp;<a href="https://arxiv.org/abs/2105.01081">arXiv:2105.01081</a></div></li>
+      <li class="paper first"><div class="year">2021</div>
+        <div><div class="title"><a href="https://arxiv.org/abs/2103.10964">Damped Lyman-alpha absorbers from Sloan Digital Sky Survey DR16Q with Gaussian processes</a></div>
+        <div class="authors"><b>M.-F. Ho</b>, S. Bird, R. Garnett</div></div>
+        <div class="venue">MNRAS 507, 704 ·&nbsp;<a href="https://arxiv.org/abs/2103.10964">arXiv:2103.10964</a></div></li>
+      <li class="paper first"><div class="year">2020</div>
+        <div><div class="title"><a href="https://arxiv.org/abs/2003.11036">Detecting multiple DLAs per spectrum in SDSS DR12 with Gaussian processes</a></div>
+        <div class="authors"><b>M.-F. Ho</b>, S. Bird, R. Garnett</div></div>
+        <div class="venue">MNRAS 496, 5436 ·&nbsp;<a href="https://arxiv.org/abs/2003.11036">arXiv:2003.11036</a></div></li>
+    </ol>
+
+    <ol class="papers" id="papers-full" hidden>
+      <li class="paper"><div class="year">2026</div><div><div class="title"><a href="https://arxiv.org/abs/2608.13774">FLARE MCMC: fidelity-based layer-adaptive recursive proposals for MCMC</a></div><div class="authors">H. Venkatesan, C. R. Shelton, <b>M.-F. Ho</b>, S. Bird, M. Wu</div></div><div class="venue">SIAM/ASA J. Uncertainty Quantification 14, 661</div></li>
+      <li class="paper"><div class="year">2026</div><div><div class="title"><a href="https://arxiv.org/abs/2507.07177">Ten-dimensional neural network emulator for the nonlinear matter power spectrum</a></div><div class="authors">Y. Yang, S. Bird, <b>M.-F. Ho</b>, M. Qezlou</div></div><div class="venue">Phys. Rev. Lett. 136, 061001</div></li>
+      <li class="paper"><div class="year">2026</div><div><div class="title"><a href="https://arxiv.org/abs/2507.07184">Design and optimization of neural networks for multifidelity cosmological emulation</a></div><div class="authors">Y. Yang, S. Bird, <b>M.-F. Ho</b>, M. Qezlou</div></div><div class="venue">Phys. Rev. D 113, 043508</div></li>
+      <li class="paper"><div class="year">2026</div><div><div class="title">Microlensing constraints on primordial black holes toward the bulge are Galactic-model limited</div><div class="authors">S. E. Perkins, P. McGill, W. A. Dawson, <b>M.-F. Ho</b>, N. S. Abrams, S. Bird, J. R. Lu</div></div><div class="venue">ApJ 1006, 110</div></li>
+      <li class="paper"><div class="year">2025</div><div><div class="title"><a href="https://arxiv.org/abs/2503.14740">Construction of the damped absorber catalog for DESI DR2 Lyα BAO</a></div><div class="authors">A. Brodzeller, M. Wolfson, D. M. Santos, <b>M.-F. Ho</b>, T. Tan, M. M. Pieri, A. Cuceu, et al.</div></div><div class="venue">Phys. Rev. D 112, 083510</div></li>
+      <li class="paper"><div class="year">2025</div><div><div class="title"><a href="https://arxiv.org/abs/2501.06296">Ten-parameter simulation suite for cosmological emulation beyond ΛCDM (Goku)</a></div><div class="authors">Y. Yang, S. Bird, <b>M.-F. Ho</b></div></div><div class="venue">Phys. Rev. D 111, 083529</div></li>
+      <li class="paper"><div class="year">2025</div><div><div class="title"><a href="https://arxiv.org/abs/2410.14098">On finding black holes in photometric microlensing surveys</a></div><div class="authors">Z. Kaczmarek, P. McGill, S. E. Perkins, W. A. Dawson, M. Huston, <b>M.-F. Ho</b>, et al.</div></div><div class="venue">ApJ 981, 183</div></li>
+      <li class="paper"><div class="year">2025</div><div><div class="title"><a href="https://arxiv.org/abs/2503.14738">DESI DR2 results II: measurements of baryon acoustic oscillations and cosmological constraints</a></div><div class="authors">DESI Collaboration</div></div><div class="venue">Phys. Rev. D 112, 083515</div></li>
+      <li class="paper"><div class="year">2025</div><div><div class="title"><a href="https://arxiv.org/abs/2503.14739">DESI DR2 results I: baryon acoustic oscillations from the Lyman-α forest</a></div><div class="authors">DESI Collaboration</div></div><div class="venue">Phys. Rev. D 112, 083514</div></li>
+      <li class="paper"><div class="year">2024</div><div><div class="title"><a href="https://arxiv.org/abs/2309.03943">Cosmological constraints from the eBOSS Lyman-α forest using the PRIYA simulations</a></div><div class="authors">M. A. Fernandez, S. Bird, <b>M.-F. Ho</b></div></div><div class="venue">JCAP 2024(07) 029</div></li>
+      <li class="paper"><div class="year">2024</div><div><div class="title"><a href="https://arxiv.org/abs/2310.06010">Forecast cosmological constraints with the 1D wavelet scattering transform and the Lyman-α forest</a></div><div class="authors">H. M. Tohfa, S. Bird, <b>M.-F. Ho</b>, M. Qezlou, M. A. Fernandez</div></div><div class="venue">Phys. Rev. Lett. 132, 231002</div></li>
+      <li class="paper"><div class="year">2024</div><div><div class="title"><a href="https://arxiv.org/abs/2312.13249">Astrometric microlensing by primordial black holes with the Roman Space Telescope</a></div><div class="authors">J. Fardeen, P. McGill, S. E. Perkins, W. A. Dawson, N. S. Abrams, J. R. Lu, <b>M.-F. Ho</b>, et al.</div></div><div class="venue">ApJ 965, 138</div></li>
+      <li class="paper"><div class="year">2024</div><div><div class="title"><a href="https://arxiv.org/abs/2310.03943">Disentangling the black hole mass spectrum with photometric microlensing surveys</a></div><div class="authors">S. E. Perkins, P. McGill, W. Dawson, N. S. Abrams, C. Y. Lam, <b>M.-F. Ho</b>, J. R. Lu, et al.</div></div><div class="venue">ApJ 961, 179</div></li>
+      <li class="paper"><div class="year">2023</div><div><div class="title"><a href="https://arxiv.org/abs/2305.00023">Machine learning uncovers the universe's hidden gems: a comprehensive catalogue of C IV absorption lines in SDSS DR12</a></div><div class="authors">R. Monadi, <b>M.-F. Ho</b>, K. L. Cooksey, S. Bird</div></div><div class="venue">MNRAS 526, 4557</div></li>
+      <li class="paper"><div class="year">2023</div><div><div class="title"><a href="https://arxiv.org/abs/2306.05471">PRIYA: a new suite of Lyman-α forest simulations for cosmology</a></div><div class="authors">S. Bird, M. A. Fernandez, <b>M.-F. Ho</b>, M. Qezlou, R. Monadi, Y. Ni, N. Chen, R. Croft, et al.</div></div><div class="venue">JCAP 2023(10) 037</div></li>
+      <li class="paper"><div class="year">2022</div><div><div class="title"><a href="https://arxiv.org/abs/2207.06445">A multifidelity emulator for the Lyman-α forest flux power spectrum</a></div><div class="authors">M. A. Fernandez, <b>M.-F. Ho</b>, S. Bird</div></div><div class="venue">MNRAS 517, 3200</div></li>
+      <li class="paper"><div class="year">2020</div><div><div class="title"><a href="https://arxiv.org/abs/2006.07343">Automated measurement of quasar redshift with a Gaussian process</a></div><div class="authors">L. Fauber, <b>M.-F. Ho</b>, S. Bird, C. R. Shelton, R. Garnett, I. Korde</div></div><div class="venue">MNRAS 498, 5227</div></li>
+      <li class="paper"><div class="year">2016</div><div><div class="title"><a href="https://arxiv.org/abs/1605.09261">AMiBA: cluster Sunyaev–Zel'dovich effect observations with the expanded 13-element array</a></div><div class="authors">K.-Y. Lin, H. Nishioka, F.-C. Wang, et al. (AMiBA Collaboration)</div></div><div class="venue">ApJ 830, 91</div></li>
+    </ol>
+
+    <div class="papers-more">
+      <button id="papers-toggle" type="button">Show the full list</button>
+      <a href="https://scholar.google.com/citations?user=gF5V0LUAAAAJ&hl=en">Google Scholar ↗</a>
+      <a href="https://orcid.org/0000-0002-4457-890X">ORCID ↗</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="chapter">
+  <div class="col">
+    <div class="chapter-head">
+      <div><div class="num">05 · ABOUT</div><canvas class="strip" data-row="300" aria-hidden="true"></canvas></div>
+      <div><h2>Ming-Feng Ho <span style="font-weight:300; color:var(--muted); font-size:0.6em; margin-left:10px">何銘峰</span></h2></div>
+    </div>
+    <div class="about">
+      <div class="k">NOW</div>
+      <div>
+        <p>I am currently a postdoctoral fellow at the University of Michigan. Most of my work is on the Lyα forest, dense absorbers, and the inference problems that come with them. I have also worked on emulation and black-hole population inference.</p>
+        <p>I did my PhD at UC Riverside with Simeon Bird, after studying physics and astrophysics at National Taiwan University. As an undergraduate, I also spent much of my time in the philosophy department. I pursued a philosophy minor for several years, although I never formally completed it, and for much of college I probably took philosophy more seriously than physics.</p>
+        <p class="personal">Outside physics, I play cello, brew coffee, cook, and make wagashi and Suzhou-style mooncakes. I also like hiking, road trips, and exploring America's natural landscapes.</p>
+        <p class="personal">Before graduate school, I also worked on text mining and digital editions of classical Chinese texts. I no longer work in philosophy, but it probably shaped how I think more than astronomy did. That training still shows up in how I do science. I tend to spend a lot of time on the assumptions behind a problem, on whether the question is framed correctly, and on things that are easy to leave unexamined.</p>
+      </div>
+      <div class="side">
+        <div class="row"><span>email</span><a href="mailto:mfho@umich.edu">mfho@umich.edu</a></div>
+        <div class="row"><span>cv</span><a href="cv/">Curriculum vitae</a></div>
+        <div class="row"><span>scholar</span><a href="https://scholar.google.com/citations?user=gF5V0LUAAAAJ&hl=en">profile ↗</a></div>
+        <div class="row"><span>orcid</span><a href="https://orcid.org/0000-0002-4457-890X">0000-0002-4457-890X ↗</a></div>
+        <div class="row"><span>github</span><a href="https://github.com/jibancat/">jibanCat ↗</a></div>
+        <div class="row"><span>linkedin</span><a href="https://www.linkedin.com/in/ming-feng-ho-a20431121">profile ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div><canvas class="strip" data-row="239" aria-hidden="true"></canvas>simulation data: PRIYA (Bird, Fernandez, Ho et al. 2023; Fernandez, Bird &amp; Ho 2024) · films, figures and this page: Ming-Feng Ho · the GP spectrum in Selected work is synthetic</div>
+  <div><a href="cv/">CV</a> ·&nbsp;<a href="https://scholar.google.com/citations?user=gF5V0LUAAAAJ&hl=en">Scholar&nbsp;↗</a> ·&nbsp;<a href="https://orcid.org/0000-0002-4457-890X">ORCID&nbsp;↗</a> ·&nbsp;<a href="https://github.com/jibancat/">GitHub&nbsp;↗</a></div>
+</footer>
+
+<script src="data/f5-meta.js"></script>
+<script src="data/figures.js"></script>
+<script src="js/hero/field-gl.js"></script>
+<script src="js/hero/field-2d.js"></script>
+<script src="js/hero/engine.js"></script>
+<script>
+  // The field is a 1.3 MB binary, not base64: fetched once, decoded once, shared by the hero,
+  // the section strips and the project visuals. Everything that needs it starts after it lands.
+  (async () => {
+    const D = window.CORE_SAMPLE_DATA;
+    // The field is the hero's material, not the page's. Whatever happens to it, the rest of the
+    // site must still load: menu, papers, figures, the play illustration. Hero failure is never
+    // page failure, so every step below is contained and the loader at the end always runs.
+    try {
+      const buf = await fetch(D.field_bin, { cache: 'force-cache' }).then(r => {
+        if (!r.ok) throw new Error('field ' + r.status);
+        return r.arrayBuffer();
+      });
+      const want = D.nx * D.ny;
+      if (buf.byteLength !== want * 2) throw new Error('field is ' + buf.byteLength + ' bytes, expected ' + want * 2);
+      const F16 = new Uint16Array(buf);
+      const F32 = new Float32Array(F16.length);
+      const inv = 1 / D.field_scale;
+      for (let i = 0; i < F16.length; i++) F32[i] = F16[i] * inv;
+      D.F16 = F16; D.F32 = F32;                 // published only once complete and the right length
+    } catch (err) {
+      console.error('[site] the simulated field could not be loaded', err);
+      document.getElementById('hero').classList.add('no-field');
+    }
+    if (document.fonts && document.fonts.ready) { try { await document.fonts.ready; } catch (e) {} }
+    if (D.F32) {
+      try { startCoreSample({ mode: 0 }); }
+      catch (err) {
+        console.error('[site] the hero could not start', err);
+        document.getElementById('hero').classList.add('no-field');
+      }
+    }
+    for (const src of ['js/figures.js', 'js/site.js', 'js/play-board.js']) {
+      await new Promise((res) => { const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = res; document.head.appendChild(s); });
+    }
+  })();
+</script>
 </body>
 </html>
