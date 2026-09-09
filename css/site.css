@@ -1,0 +1,373 @@
+/* Ming-Feng Ho — research portfolio. Design system: cool contemporary ink.
+   Paper, slate wash, blue-black graphite, cool light, cinnabar reserved for dense absorbers. */
+:root {
+  --paper: #F4F2ED;
+  --paper-2: #EDEBE5;
+  --mist: #DDE5EE;
+  --wash: #7D8DA3;
+  --ink: #1F2732;
+  --pool: #0C121B;
+  --muted: #6F7278;
+  --faint: #C9CBCF;
+  --hair: #DAD8D2;
+  --rust: #B93A20;
+  --ref: #7A8794;
+  --light: #DCEBF6;
+  --serif: "Inter Greek", "Noto Serif TC", "Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans: "Inter Greek", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Inter Greek", "IBM Plex Mono", "SF Mono", Menlo, monospace;
+  --col: 1120px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; background: var(--paper); color: var(--ink); }
+body { font-family: var(--sans); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--ink); }
+::selection { background: var(--mist); }
+
+/* ---------------------------------------------------------------- header: the practical index, present from frame one */
+.site-header {
+  position: fixed; inset: 0 0 auto 0; z-index: 10; height: 56px;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 40px;
+  font-size: 13px; letter-spacing: 0.01em; color: var(--muted);
+  pointer-events: none;
+}
+/* The header is click-through so it never blocks the hero, but anything the visitor can actually
+   aim at must take pointer events, including the open menu panel: a tap landing in the gap
+   between two of its links used to reach the hero canvas and close the menu as an outside click. */
+.site-header a, .site-header .mark, .site-header summary, .site-header .hdr-menu[open] .panel { pointer-events: auto; }
+.site-header .mark { font-family: var(--serif); font-weight: 300; font-size: 17px; color: var(--ink); opacity: 1; letter-spacing: 0.005em; }
+.site-header .mark:hover { color: var(--pool); }
+.site-header nav { display: flex; gap: 26px; align-items: center; }
+.site-header nav a { color: var(--muted); transition: color 0.2s; }
+.site-header nav a:hover, .site-header nav a.active { color: var(--ink); }
+.site-header nav .sep { width: 1px; height: 14px; background: var(--faint); }
+.site-header nav a.ext::after { content: " ↗"; font-size: 12px; }
+.site-header::before {                       /* a soft paper veil so links stay legible over the field */
+  content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(244,242,237,0.96), rgba(244,242,237,0.55) 60%, rgba(244,242,237,0)); z-index: -1;
+  opacity: 1; transition: opacity 0.6s;
+}
+.site-header.scrolled::before { opacity: 1; background: rgba(244,242,237,0.94); border-bottom: 1px solid var(--hair); }
+
+/* ---------------------------------------------------------------- hero */
+#hero { position: relative; height: 100vh; min-height: 640px; overflow: hidden; cursor: crosshair; }
+#hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#gl, #field2d { z-index: 0; }
+/* `#hero canvas` sets display:block, an author rule that outranks the UA [hidden] rule, so the
+   attribute alone would not hide the inactive field canvas. Same trap as #papers-full below. */
+#hero canvas[hidden] { display: none; }
+/* pan-y, not none: the browser keeps vertical scrolling, the horizontal drag still reaches the
+   reader. With none the hero was a full-screen scroll trap on a phone. */
+#c { z-index: 1; touch-action: pan-y; }
+
+/* ---------------------------------------------------------------- the field thins into a band: the transition */
+.band { position: relative; height: 84px; overflow: visible; background: var(--paper); margin-bottom: 26px; }
+.band canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.band .band-caption { position: absolute; left: 40px; top: 92px; font-size: 11px; color: var(--muted); letter-spacing: 0.02em; }
+
+/* ---------------------------------------------------------------- sections */
+main { position: relative; }
+section.chapter { padding: 128px 40px 104px; }
+.col { max-width: var(--col); margin: 0 auto; }
+.chapter-head { display: grid; grid-template-columns: 180px 1fr; gap: 32px; align-items: end; margin-bottom: 68px; }
+.chapter-head .num { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
+.chapter-head h2 { font-family: var(--serif); font-weight: 300; font-size: 44px; line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+.chapter-head .lede { font-size: 17px; color: var(--muted); max-width: 640px; margin: 14px 0 0; line-height: 1.5; }
+.strip { display: block; width: 100%; height: 6px; margin: 10px 0 0; }   /* a real row of the field, the section's sightline */
+
+/* ---------------------------------------------------------------- research: themes */
+.themes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px 44px; }
+.theme { border-top: 1px solid var(--hair); padding-top: 18px; }
+.theme .strip { height: 5px; margin: 0 0 16px; }
+.theme .rv { display: block; width: 100%; height: 66px; margin: 0 0 16px; }
+.theme h3 { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.15; margin: 0 0 10px; }
+.theme p { margin: 0 0 10px; color: #3A3F47; font-size: 15px; }
+.theme .q { font-size: 14px; color: var(--muted); font-style: italic; }
+.thread { margin-top: 72px; padding: 28px 0 0; border-top: 1px solid var(--hair); display: grid; grid-template-columns: 180px 1fr; gap: 32px; }
+.thread .k { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; padding-top: 6px; }
+
+/* a marginal note in the same hand as .thread: the vocabulary the rest of the page already uses */
+.bayes { margin-top: 64px; padding: 24px 0 0; border-top: 1px solid var(--hair); display: grid; grid-template-columns: 180px 1fr; gap: 32px; }
+.bayes .k { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; padding-top: 3px; }
+.bayes .expr { margin: 0 0 20px; font-family: var(--mono); font-size: 14px; color: var(--ink); letter-spacing: 0.02em; }
+.bayes .terms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 44px; max-width: 760px; }
+.bayes .terms > div { font-size: 14px; line-height: 1.45; color: #3A3F47; }
+.bayes .t { display: block; font-family: var(--mono); font-size: 11.5px; color: var(--muted); letter-spacing: 0.04em; margin-bottom: 5px; }
+.bayes .vig { display: block; width: 100%; height: 62px; margin: 0 0 12px; }
+.thread p { margin: 0; font-size: 17px; max-width: 760px; }
+.thread .chain { font-family: var(--mono); font-size: 14px; color: var(--muted); }
+.thread .chain > span { white-space: nowrap; }
+
+/* ---------------------------------------------------------------- projects: visual first, detail on request */
+.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 104px 64px; }
+.project { display: flex; flex-direction: column; }
+.project.lead { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr; gap: 0 64px; align-items: start; margin-bottom: 8px; }
+
+.pv { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--paper); border: 1px solid var(--hair); }
+.project.lead .pv { aspect-ratio: 5 / 3; }
+/* the closing beat: a wide quiet panel with paper around it, not another grid cell */
+.project.coda { grid-column: 1 / -1; margin-top: 26px; }
+.project.coda .pv { aspect-ratio: 30 / 7; border: 0; background: transparent; }
+.project.coda .meta, .project.coda h3, .project.coda .what, .project.coda .result,
+.project.coda .links, .project.coda details { max-width: 620px; }
+.pv img, .pv canvas, .pv iframe { display: block; width: 100%; height: 100%; border: 0; object-fit: cover; }
+.pv canvas { object-fit: contain; }
+.pv .play-badge {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 58px; height: 58px; border-radius: 50%; background: rgba(12,18,27,0.6);
+  display: grid; place-items: center; transition: background 0.2s, transform 0.2s;
+}
+.pv .play-badge::after { content: ""; border-left: 14px solid #F4F2ED; border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 4px; }
+a.pv:hover .play-badge { background: rgba(12,18,27,0.86); transform: translate(-50%, -50%) scale(1.06); }
+.pv .credit {
+  position: absolute; right: 0; bottom: 0; font-family: var(--mono); font-size: 9.5px; color: var(--muted);
+  background: rgba(244,242,237,0.92); padding: 3px 7px; letter-spacing: 0.02em; max-width: 100%; white-space: nowrap;
+}
+
+.project .meta { font-family: var(--mono); font-size: 10.5px; color: var(--faint); letter-spacing: 0.08em; display: flex; gap: 16px; margin: 24px 0 0; text-transform: uppercase; }
+.project .meta span:first-child { color: var(--muted); }
+.project h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.14; margin: 8px 0 12px; letter-spacing: -0.005em; }
+.project.lead h3 { font-size: 33px; }
+.project .what { font-size: 16.5px; line-height: 1.55; margin: 0 0 12px; color: #2B323C; }
+.project.lead .what { font-size: 18px; }
+.project .result { font-size: 14.5px; line-height: 1.55; margin: 0 0 18px; color: var(--muted); }
+.project .result::before { content: "→ "; color: var(--faint); }
+.project .links { font-size: 13px; display: flex; flex-wrap: wrap; gap: 16px; color: var(--muted); align-items: center; }
+.project .links a { border-bottom: 1px solid var(--faint); padding-bottom: 1px; }
+.project .links a:hover { border-color: var(--ink); }
+
+.project details { margin-top: 26px; border-top: 1px solid var(--hair); }
+.project details > summary {
+  list-style: none; cursor: pointer; font-family: var(--mono); font-size: 11px; letter-spacing: 0.09em;
+  color: var(--muted); padding: 14px 0 14px; display: flex; align-items: center; justify-content: space-between;
+  text-transform: uppercase; min-height: 44px; box-sizing: border-box;
+  border-bottom: 1px solid transparent; transition: color 0.18s, border-color 0.18s;
+}
+.project details > summary > span { display: inline-block; }
+.project details > summary::-webkit-details-marker { display: none; }
+.project details > summary::after { content: "+"; font-size: 15px; line-height: 1; color: var(--wash); transition: transform 0.22s ease, color 0.18s; }
+.project details[open] > summary::after { content: "+"; transform: rotate(45deg); }
+.project details > summary:hover { color: var(--ink); border-bottom-color: var(--faint); }
+.project details > summary:hover::after { color: var(--ink); }
+.project details[open] > summary { color: var(--ink); }
+.project details:not([open]) dl,
+.project details:not([open]) .note { display: none; }
+.project dl { margin: 14px 0 8px; display: grid; grid-template-columns: 84px 1fr; gap: 9px 16px; font-size: 14.5px; }
+.project dt { color: var(--muted); font-size: 13px; }
+.project dd { margin: 0; color: #3A3F47; }
+.project details .note { margin: 14px 0 0; font-size: 14.5px; line-height: 1.5; color: #3A3F47; }
+.project details .note + .note { margin-top: 8px; }
+
+.more-work { margin-top: 112px; border-top: 1px solid var(--hair); padding-top: 26px; }
+.more-work > summary {
+  list-style: none; cursor: pointer; font-family: var(--mono); font-size: 12px; letter-spacing: 0.09em;
+  color: var(--muted); display: flex; align-items: center; justify-content: space-between;
+  text-transform: uppercase; min-height: 44px; padding: 4px 0;
+  border-bottom: 1px solid transparent; transition: color 0.18s, border-color 0.18s;
+}
+.more-work > summary::after { color: var(--wash); font-size: 15px; transition: transform 0.22s ease; }
+.more-work[open] > summary::after { transform: rotate(45deg); }
+.more-work > summary:hover { border-bottom-color: var(--faint); }
+.more-work > summary::-webkit-details-marker { display: none; }
+.more-work > summary::after { content: "+"; }
+.more-work[open] > summary::after { content: "+"; }
+.more-work > summary:hover { color: var(--ink); }
+.more-work:not([open]) .more-list { display: none; }
+.more-list { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 22px 56px; }
+.more-list li { border-top: 1px solid var(--hair); padding-top: 13px; font-size: 15px; }
+.more-list .t { display: block; margin-bottom: 3px; }
+.more-list .d { color: var(--muted); font-size: 13.5px; }
+.more-list a { border-bottom: 1px solid var(--faint); }
+
+/* ---------------------------------------------------------------- play */
+#play { background: var(--pool); color: var(--paper); }
+#play .chapter-head h2, #play .chapter-head .num { color: var(--paper); }
+#play .chapter-head .lede { color: #B8C0CB; }
+.play-stage { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: start; margin-top: 8px; }
+.play-board { position: relative; background: #101821; border: 1px solid #22303C; height: 420px; overflow: hidden; }
+.play-board canvas { width: 100%; height: 100%; display: block; }
+.play-board .tag { position: absolute; left: 18px; top: 14px; font-family: var(--mono); font-size: 11px; color: #8FA0B4; letter-spacing: 0.06em; }
+.play-text h3 { font-family: var(--serif); font-weight: 300; font-size: 34px; line-height: 1.1; margin: 0 0 14px; }
+.play-text p { color: #C9D0D9; font-size: 16px; margin: 0 0 12px; max-width: 520px; }
+.play-text .facts { font-family: var(--mono); font-size: 12px; color: #8FA0B4; margin: 18px 0 22px; line-height: 1.9; }
+.btn { display: inline-block; border: 1px solid #5B6B7C; color: var(--paper); padding: 12px 20px; font-size: 14px; letter-spacing: 0.02em; transition: background 0.2s, border-color 0.2s; }
+.btn:hover { background: #1B2733; border-color: #8FA0B4; color: var(--paper); }
+.btn.light { border-color: var(--faint); color: var(--ink); } .btn.light:hover { background: var(--paper-2); }
+
+/* ---------------------------------------------------------------- papers */
+.papers { list-style: none; margin: 0; padding: 0; }
+.paper { display: grid; grid-template-columns: 64px 1fr 200px; gap: 24px; padding: 18px 0; border-top: 1px solid var(--hair); align-items: baseline; }
+.paper .year { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.paper .title { font-size: 17px; line-height: 1.35; }
+.paper .title a { border-bottom: 1px solid transparent; } .paper .title a:hover { border-color: var(--ink); }
+.paper .authors { font-size: 13.5px; color: var(--muted); margin-top: 3px; }
+.paper .authors b { font-weight: 500; color: #3A3F47; }
+.paper .venue { font-size: 13px; color: var(--muted); text-align: right; }
+.paper .venue a { color: var(--ref); border-bottom: 1px solid var(--faint); }
+.paper.first .title::before { content: ""; display: inline-block; width: 18px; height: 3px; background: var(--ink); margin-right: 10px; vertical-align: middle; }
+.papers-more { margin-top: 26px; display: flex; gap: 22px; font-size: 14px; color: var(--muted); align-items: center; }
+.papers-more button { background: none; border: 1px solid var(--faint); color: var(--ink); padding: 8px 14px; font: inherit; font-size: 13.5px; cursor: pointer; }
+.papers-more button:hover { background: var(--paper-2); }
+#papers-full[hidden] { display: none; }
+
+/* ---------------------------------------------------------------- about */
+.about { display: grid; grid-template-columns: 180px 1fr 300px; gap: 32px; }
+.about .k { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; padding-top: 6px; }
+.about p { margin: 0 0 16px; font-size: 17px; max-width: 640px; }
+/* one voice, one face: with two personal paragraphs the serif switch stopped reading as a coda
+   and started reading as half the section being set in a different font. */
+.about p.personal { margin-top: 26px; color: var(--ink); }
+.about .side { font-size: 14px; color: var(--muted); line-height: 1.8; }
+.about .side a { color: var(--ink); border-bottom: 1px solid var(--faint); }
+.about .side .row { display: grid; grid-template-columns: 90px 1fr; gap: 10px; }
+
+/* ---------------------------------------------------------------- footer */
+footer { padding: 40px; border-top: 1px solid var(--hair); font-size: 12.5px; color: var(--muted); display: flex; justify-content: space-between; }
+footer .strip { width: 120px; height: 4px; display: inline-block; vertical-align: middle; margin: 0 10px 0 0; }
+
+
+/* ================================================================ responsive: one column, fewer labels, preserved whitespace */
+@media (max-width: 1100px) {
+  .projects { grid-template-columns: 1fr 1fr; gap: 88px 48px; }
+  .project.lead { grid-template-columns: 1fr; gap: 0; }
+  .project.lead .pv { aspect-ratio: 16 / 9; }
+  .themes { grid-template-columns: 1fr 1fr; }
+  .about { grid-template-columns: 140px 1fr; }
+  .about .side { grid-column: 2; margin-top: 8px; }
+}
+@media (max-width: 900px) {
+  .site-header { padding: 0 22px; height: 52px; }
+  .site-header nav { gap: 16px; font-size: 12.5px; }
+  .site-header nav a[data-section] { display: none; }               /* the sections are one scroll away; keep the practical endpoints */
+  .site-header nav .sep { display: none; }
+  .site-header .mark { font-size: 16px; }
+  section.chapter { padding: 88px 22px 72px; }
+  .chapter-head { grid-template-columns: 1fr; gap: 14px; margin-bottom: 44px; }
+  .chapter-head h2 { font-size: 34px; }
+  .chapter-head .lede { font-size: 16px; }
+  .themes { grid-template-columns: 1fr; gap: 40px; }
+  .theme .rv { height: 50px; margin-bottom: 14px; }
+  /* the ξ form is the one mark that loses its shape at 50 px; the other two do not need the height */
+  .theme .rv[data-state="many"] { height: 56px; }
+  .thread { grid-template-columns: 1fr; gap: 10px; }
+  .bayes { grid-template-columns: 1fr; gap: 12px; margin-top: 52px; }
+  .bayes .terms { grid-template-columns: 1fr; gap: 15px 0; }
+  .bayes .vig { height: 38px; margin-bottom: 7px; }
+  .bayes .expr { margin-bottom: 16px; }
+  .projects { grid-template-columns: 1fr; gap: 80px; }
+  .project.coda { margin-top: 0; }
+  .project.coda .pv { aspect-ratio: 16 / 9; }
+  .project.lead h3 { font-size: 28px; }
+  .project .links { gap: 14px; }
+  .more-list { grid-template-columns: 1fr; }
+  .play-stage { grid-template-columns: 1fr; gap: 28px; }
+  .play-board { height: 300px; }
+  .paper { grid-template-columns: 52px 1fr; }
+  .paper .venue { grid-column: 2; text-align: left; margin-top: 4px; }
+  .about { grid-template-columns: 1fr; }
+  .about .side { grid-column: 1; margin-top: 18px; }
+  .about .k { display: none; }
+  .band .band-caption { left: 22px; }
+  footer { flex-direction: column; gap: 10px; padding: 32px 22px; }
+}
+@media (max-width: 560px) {
+  #hero { min-height: 560px; }
+  section.chapter { padding: 72px 18px 60px; }
+  .chapter-head h2 { font-size: 30px; }
+  .project h3, .project.lead h3 { font-size: 24px; }
+  .project .what, .project.lead .what { font-size: 16px; }
+  .project dl { grid-template-columns: 1fr; gap: 2px 0; }
+  .project dt { margin-top: 8px; }
+  .paper .title { font-size: 16px; }
+  .site-header nav { gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .site-header .mark, .site-header::before, .pv .play-badge { transition: none; }
+}
+
+/* keyboard: the hero is focusable, so it must show focus */
+#c:focus-visible { outline: 2px solid var(--ink); outline-offset: -3px; }
+#c:focus { outline: none; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 1px;
+}
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 20; background: var(--paper); color: var(--ink);
+  padding: 10px 16px; border: 1px solid var(--ink); font-size: 14px;
+}
+.skip-link:focus { left: 12px; top: 12px; }
+
+/* ---------------------------------------------------------------- affordance rule
+   One system, applied to every card:
+     the visual is illustrative and is never clickable;
+     every destination lives in the links row;
+     HOW IT WORKS opens the deeper explanation.
+   So the visual takes the default cursor and the links carry the only hover response. */
+.pv, .pv canvas { cursor: default; }
+.project .links a { transition: border-color 0.18s, color 0.18s; }
+
+/* Play: one unmistakable way in */
+.btn { position: relative; }
+.play-text .btn {
+  display: inline-flex; align-items: center; gap: 12px; padding: 15px 26px;
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase;
+  border-color: #7C8CA0; transition: background 0.2s, border-color 0.2s, gap 0.2s;
+}
+.play-text .btn:hover { background: #1B2733; border-color: var(--light); gap: 18px; }
+.play-text .btn .arrow { transition: transform 0.2s; }
+.play-text .btn:hover .arrow { transform: translateX(3px); }
+
+/* mobile header: the name always, the practical link always, the sections behind one quiet control */
+.hdr-menu { position: relative; }
+.hdr-menu > summary {
+  list-style: none; cursor: pointer; color: var(--muted); font-size: 13px; display: flex; align-items: center;
+  gap: 6px; min-height: 44px; padding: 0 2px;
+}
+.hdr-menu > summary::-webkit-details-marker { display: none; }
+.hdr-menu > summary::after { content: "+"; font-size: 14px; color: var(--wash); transition: transform 0.22s ease; }
+.hdr-menu[open] > summary::after { transform: rotate(45deg); }
+.hdr-menu > summary:hover { color: var(--ink); }
+.hdr-menu:not([open]) .panel { display: none; }
+.hdr-menu .panel {
+  position: absolute; right: 0; top: 44px; min-width: 176px; padding: 14px 20px 16px;
+  background: rgba(244,242,237,0.94); backdrop-filter: saturate(112%) blur(7px); -webkit-backdrop-filter: saturate(112%) blur(7px);
+  border: 0; border-top: 1px solid var(--ink); box-shadow: 0 10px 30px rgba(20,23,28,0.06);
+  display: grid; gap: 11px;
+  animation: panel-in 0.22s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+@keyframes panel-in { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .hdr-menu .panel { animation: none; } }
+.hdr-menu .panel a.sec { font-family: var(--serif); font-weight: 300; font-size: 17px; }
+.hdr-menu .panel a { color: var(--ink); font-size: 15px; }
+.hdr-menu .panel .rule { height: 1px; background: var(--hair); margin: 4px 0 2px; }
+.hdr-menu .panel a { color: var(--muted); }
+.hdr-menu .panel a:hover { color: var(--ink); }
+.hdr-menu .panel a.sec { color: var(--ink); }
+@media (min-width: 901px) { .hdr-menu > summary { font-size: 13px; } }
+@media (max-width: 900px) { .site-header .mark { font-size: 16px; } }
+
+/* ---------------------------------------------------------------- mobile density
+   The result sentence used to move into How it works on narrow layouts. Since the RC2 prose the
+   first paragraph is setup and the result carries the finding, so hiding it left the two most
+   important cards ending on a question. It now stays visible at every width (PI ruling M1). */
+@media (max-width: 900px) {
+  .project .result { font-size: 15px; color: #3A3F47; }
+  /* the closing beat keeps its typographic pause without becoming a long empty scroll */
+  .project.coda .pv { aspect-ratio: 16 / 6; }
+  .more-work { margin-top: 72px; }
+}
+@media (max-width: 560px) {
+  .project.coda .pv { aspect-ratio: 5 / 3; }
+}
+/* the hero if the field never arrives: paper, not a broken black box */
+#hero.no-field canvas { display: none; }
+#hero.no-field::after {
+  content: "The simulated field could not be loaded."; position: absolute; left: 40px; bottom: 40px;
+  font-size: 13px; color: var(--muted);
+}
+
+/* the Play control when the game is not part of the build */
+.btn.is-pending { opacity: 0.5; cursor: default; border-style: dashed; }
+.btn.is-pending:hover { background: none; border-color: #5B6B7C; }

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum Vitae · Ming-Feng Ho</title>
+<meta name="description" content="Curriculum vitae of Ming-Feng Ho, postdoctoral fellow at the University of Michigan.">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  /* the CV lives inside the same paper world; the PDF stays the single source of truth */
+  body { min-height: 100vh; }
+  .cv-wrap { max-width: var(--col); margin: 0 auto; padding: 104px 40px 64px; }
+  .cv-head { display: grid; grid-template-columns: 180px 1fr; gap: 32px; align-items: end; margin-bottom: 40px; }
+  .cv-head .num { font-family: var(--mono); font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
+  .cv-head h1 { font-family: var(--serif); font-weight: 300; font-size: 44px; margin: 0; letter-spacing: -0.01em; }
+  .cv-head .who { font-size: 17px; color: var(--muted); margin: 12px 0 0; }
+  .cv-head .updated { font-family: var(--mono); font-size: 11.5px; color: var(--faint); margin: 8px 0 0; letter-spacing: 0.04em; }
+  .cv-actions { display: flex; gap: 18px; align-items: center; margin: 0 0 26px; font-size: 13.5px; }
+  .cv-actions a { border-bottom: 1px solid var(--faint); padding-bottom: 2px; color: var(--ink); }
+  .cv-actions a:hover { border-color: var(--ink); }
+  .cv-actions .back { color: var(--muted); border: 0; margin-left: auto; }
+  .cv-frame { border: 1px solid var(--hair); background: var(--paper-2); height: 78vh; min-height: 520px; }
+  .cv-frame object, .cv-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .cv-fallback { padding: 40px; display: grid; gap: 14px; place-content: center; text-align: center; color: var(--muted); font-size: 15px; }
+  .cv-note { margin-top: 22px; font-size: 12.5px; color: var(--muted); }
+  /* small screens: browsers embed PDFs unreliably, so offer the two honest controls instead */
+  @media (max-width: 820px) {
+    .cv-wrap { padding: 88px 22px 56px; }
+    /* the two controls live in one place on a phone, not two */
+    .cv-actions a:not(.back) { display: none; }
+    .cv-actions { margin-bottom: 18px; }
+    .cv-head { grid-template-columns: 1fr; gap: 10px; }
+    .cv-head h1 { font-size: 34px; }
+    .cv-frame { display: none; }
+    .cv-mobile { display: grid; gap: 12px; border: 1px solid var(--hair); padding: 26px 22px; background: var(--paper-2); }
+    .cv-mobile a { display: block; font-size: 16px; color: var(--ink); border-bottom: 1px solid var(--faint); padding-bottom: 6px; }
+  }
+  @media (min-width: 821px) { .cv-mobile { display: none; } }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#cv-main">Skip to the CV</a>
+
+<header class="site-header scrolled">
+  <a class="mark" href="../">Ming-Feng Ho</a>
+  <nav>
+    <a href="../#research" data-section="research">Research</a>
+    <a href="../#projects" data-section="projects">Projects</a>
+    <a href="../#play" data-section="play">Play</a>
+    <a href="../#papers" data-section="papers">Papers</a>
+    <a href="../#about" data-section="about">About</a>
+    <details class="hdr-menu">
+      <summary aria-label="Sections and professional links">Menu</summary>
+      <div class="panel">
+        <a class="sec" href="../#research">Research</a>
+        <a class="sec" href="../#projects">Projects</a>
+        <a class="sec" href="../#play">Play</a>
+        <a class="sec" href="../#papers">Papers</a>
+        <a class="sec" href="../#about">About</a>
+        <div class="rule"></div>
+        <a href="https://scholar.google.com/citations?user=gF5V0LUAAAAJ&hl=en">Scholar ↗</a>
+        <a href="https://orcid.org/0000-0002-4457-890X">ORCID ↗</a>
+        <a href="https://github.com/jibancat/">GitHub ↗</a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<main id="cv-main" class="cv-wrap">
+  <div class="cv-head">
+    <div><div class="num">CV</div></div>
+    <div>
+      <h1>Curriculum Vitae</h1>
+      <p class="who">Ming-Feng Ho · Leinweber Institute for Theoretical Physics, University of Michigan</p>
+      <p class="updated">updated September 2026 · 3 pages · PDF</p>
+    </div>
+  </div>
+
+  <div class="cv-actions">
+    <a href="../assets/Ming-Feng-Ho-CV.pdf" target="_blank" rel="noopener">Open the PDF ↗</a>
+    <a href="../assets/Ming-Feng-Ho-CV.pdf" download>Download PDF</a>
+    <a class="back" href="../">← back to the site</a>
+  </div>
+
+  <div class="cv-frame">
+    <object data="../assets/Ming-Feng-Ho-CV.pdf#toolbar=0&amp;navpanes=0&amp;view=FitH" type="application/pdf" aria-label="Curriculum vitae of Ming-Feng Ho">
+      <div class="cv-fallback">
+        <p>This browser will not display the PDF inline.</p>
+        <p><a href="../assets/Ming-Feng-Ho-CV.pdf" target="_blank" rel="noopener">Open the PDF ↗</a></p>
+      </div>
+    </object>
+  </div>
+
+  <div class="cv-mobile">
+    <a href="../assets/Ming-Feng-Ho-CV.pdf" target="_blank" rel="noopener">Open the PDF ↗</a>
+    <a href="../assets/Ming-Feng-Ho-CV.pdf" download>Download the PDF</a>
+  </div>
+
+  <p class="cv-note">The PDF is the canonical CV. Publications are also listed on <a href="../#papers">this site</a>, <a href="https://scholar.google.com/citations?user=gF5V0LUAAAAJ&hl=en">Google Scholar</a> and <a href="https://orcid.org/0000-0002-4457-890X">ORCID</a>.</p>
+</main>
+
+<script>
+  // the menu behaves as it does on the homepage
+  const m = document.querySelector('.hdr-menu');
+  if (m) {
+    m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { m.open = false; }));
+    document.addEventListener('click', e => { if (m.open && !m.contains(e.target)) m.open = false; });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') m.open = false; });
+  }
+</script>
+</body>
+</html>
