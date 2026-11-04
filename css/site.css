@@ -197,6 +197,29 @@ a.pv:hover .play-badge { background: rgba(12,18,27,0.86); transform: translate(-
 .btn:hover { background: #1B2733; border-color: #8FA0B4; color: var(--paper); }
 .btn.light { border-color: var(--faint); color: var(--ink); } .btn.light:hover { background: var(--paper-2); }
 
+/* the shelf below the game: the other ways in (explore, watch, listen). Unlike a project card, each
+   card here is one link, cover included, as the Ink Forest still is. */
+.play-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 64px 48px; margin-top: 104px; padding-top: 48px; border-top: 1px solid #22303C; }
+.play-card { display: block; color: var(--paper); }
+.play-card:hover { color: var(--paper); }                          /* the site-wide a:hover is ink, unreadable on the pool */
+.play-card .pv { cursor: pointer; background: #101821; border-color: #22303C; transition: border-color 0.2s; }
+.play-card:hover .pv { border-color: #7C8CA0; }
+.play-card:hover .play-badge { background: rgba(12,18,27,0.86); transform: translate(-50%, -50%) scale(1.06); }
+.play-card .pv .credit { background: rgba(16, 24, 33, 0.82); color: #C9D0D9; }
+.play-card .kind { display: block; margin: 22px 0 0; font-family: var(--mono); font-size: 10.5px; color: #8FA0B4; letter-spacing: 0.08em; text-transform: uppercase; }
+.play-card h3 { font-family: var(--serif); font-weight: 300; font-size: 26px; line-height: 1.14; margin: 8px 0 10px; }
+.play-card h3 .arrow { display: inline-block; font-size: 0.7em; color: #8FA0B4; transition: transform 0.2s, color 0.2s; }
+.play-card:hover h3 .arrow { color: var(--light); transform: translate(2px, -2px); }
+.play-card p { color: #C9D0D9; font-size: 15.5px; line-height: 1.55; margin: 0; max-width: 520px; }
+.play-card p.note { margin-top: 10px; font-size: 12.5px; color: #8FA0B4; }
+#play a:focus-visible { outline-color: var(--light); }               /* the ink outline vanishes on the pool */
+@media (max-width: 900px) {
+  .play-shelf { margin-top: 72px; padding-top: 40px; gap: 52px 28px; }
+  .play-card h3 { font-size: 23px; }
+}
+@media (max-width: 640px) { .play-shelf { grid-template-columns: 1fr; gap: 48px; } }
+@media (prefers-reduced-motion: reduce) { .play-card .pv, .play-card h3 .arrow { transition: none; } }
+
 /* ---------------------------------------------------------------- papers */
 .papers { list-style: none; margin: 0; padding: 0; }
 .paper { display: grid; grid-template-columns: 64px 1fr 200px; gap: 24px; padding: 18px 0; border-top: 1px solid var(--hair); align-items: baseline; }
