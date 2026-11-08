@@ -211,6 +211,7 @@ a.pv:hover .play-badge { background: rgba(12,18,27,0.86); transform: translate(-
 @container (max-width: 380px) { .play-card .pv .credit .more { display: none; } }
 .play-card .kind { display: block; margin: 22px 0 0; font-family: var(--mono); font-size: 10.5px; color: #8FA0B4; letter-spacing: 0.08em; text-transform: uppercase; }
 .play-card h3 { font-family: var(--serif); font-weight: 300; font-size: 26px; line-height: 1.14; margin: 8px 0 10px; }
+.play-card h3 .tail { white-space: nowrap; }                       /* the arrow never starts a line on its own */
 .play-card h3 .arrow { display: inline-block; font-size: 0.7em; color: #8FA0B4; transition: transform 0.2s, color 0.2s; }
 .play-card:hover h3 .arrow { color: var(--light); transform: translate(2px, -2px); }
 .play-card p { color: #C9D0D9; font-size: 15.5px; line-height: 1.55; margin: 0; max-width: 520px; }
