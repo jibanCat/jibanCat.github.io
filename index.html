@@ -10,14 +10,14 @@
 </head>
 <body>
 
-<a class="skip-link" href="#research">Skip to the research</a>
+<a class="skip-link" href="#intro">Skip to content</a>
 
 <header class="site-header">
   <a class="mark" href="#top">Ming-Feng Ho</a>
   <nav>
     <a href="#research" data-section="research">Research</a>
-    <a href="#projects" data-section="projects">Projects</a>
     <a href="#play" data-section="play">Play</a>
+    <a href="#projects" data-section="projects">Projects</a>
     <a href="#papers" data-section="papers">Papers</a>
     <a href="#about" data-section="about">About</a>
     <span class="sep"></span>
@@ -25,8 +25,8 @@
       <summary aria-label="Sections and professional links">Menu</summary>
       <div class="panel">
         <a class="sec" href="#research">Research</a>
-        <a class="sec" href="#projects">Projects</a>
         <a class="sec" href="#play">Play</a>
+        <a class="sec" href="#projects">Projects</a>
         <a class="sec" href="#papers">Papers</a>
         <a class="sec" href="#about">About</a>
         <div class="rule"></div>
@@ -51,10 +51,22 @@
 
 <div class="band" aria-hidden="true">
   <canvas id="band" aria-hidden="true"></canvas>
-  <div class="band-caption">the same field, thinned · every row still a sightline · simulated (PRIYA)</div>
+  <div class="band-caption">the same field, thinned · every row still a sightline · simulated&nbsp;(PRIYA)</div>
 </div>
 
 <main id="top">
+
+<section id="intro" class="intro" aria-labelledby="intro-name">
+  <div class="col intro-grid">
+    <img class="intro-photo" src="images/intro-photo.jpg" width="320" height="322" alt="Ming-Feng Ho" decoding="async">
+    <div class="intro-id">
+      <h1 id="intro-name">Ming-Feng Ho <span lang="zh-Hant">何銘峰</span></h1>
+      <div class="intro-role"><span>Postdoctoral Fellow</span><span class="dot"> · </span><span>University of Michigan</span></div>
+    </div>
+    <p class="intro-text">Originally from Taiwan, I am a computational astrophysicist, with a particular interest in how we can learn about cosmology while accounting for the astrophysics that complicates the inference. Much of my work involves Bayesian inference across different topics, ranging from quasar spectra and gravitational waves to numerical simulations.</p>
+    <div class="intro-links"><a href="cv/">CV</a><a href="#papers">Papers</a></div>
+  </div>
+</section>
 
 
 <section id="research" class="chapter">
@@ -63,7 +75,7 @@
       <div><div class="num">01 · RESEARCH</div><canvas class="strip" data-row="239" aria-hidden="true"></canvas></div>
       <div>
         <h2>From quasar light to small-scale structure</h2>
-        <p class="lede">Light from a distant quasar crosses the cosmic web before it reaches us. Diffuse hydrogen follows its filaments and sheets, absorbing the light at different wavelengths. Together, these absorption features form what we call the Lyα forest. The field above is one simulated slice of this web, with each row a sightline through it.</p>
+        <p class="lede">Light from a distant quasar crosses the cosmic web before it reaches us. Diffuse hydrogen follows its filaments and sheets, absorbing the light at different wavelengths. Together, these absorption features form what we call the Lyman-alpha (Lyα) forest. The field above is one simulated slice of this web, with each row a sightline through it.</p>
         <p class="lede">The forest lets us probe very small scales. A running primordial spectrum changes how much structure is seeded on different scales, while warm dark matter can suppress the smallest structures.</p>
       </div>
     </div>
@@ -73,18 +85,18 @@
         <canvas class="rv" data-fig="research" data-state="one" aria-hidden="true"></canvas>
         <h3>One sightline</h3>
         <p>Follow one row across the field and it becomes a spectrum. Most of the absorption comes from the diffuse hydrogen that makes up the forest. Sometimes the sightline crosses much denser neutral hydrogen in and around galaxies, producing broad damping wings that can cover a large part of the spectrum.</p>
-        <p>These dense absorbers are often difficult to see directly in emission. Against a bright quasar, however, their absorption lets us probe neutral gas in and around galaxies that would otherwise be hard to see. Measuring them means inferring the quasar light hidden beneath the damping wings, together with the absorber's redshift and column density. Across many quasars, those inferences constrain the absorber population.</p>
+        <p>These dense absorbers are often difficult to see directly in emission. Against a bright quasar, however, their absorption lets us probe this neutral gas in and around galaxies. Measuring them means inferring the quasar light hidden beneath the damping wings, together with the absorber's redshift and column density. Across many quasars, those inferences constrain the absorber population.</p>
       </article>
       <article class="theme">
         <canvas class="rv" data-fig="research" data-state="many" aria-hidden="true"></canvas>
         <h3>Many sightlines</h3>
-        <p>Keep enough sightlines and the ξ curve above begins to develop structure. The individual absorption lines fade from view, but their correlations remain. Those correlations contain information about the small-scale clustering of matter, as well as the thermal state of the gas.</p>
+        <p>Keep enough sightlines and the correlation function ξ above begins to develop structure. The individual absorption lines fade from view, but their correlations remain. Those correlations contain information about the small-scale clustering of matter, as well as the thermal state of the gas.</p>
         <p>Simulations connect forest statistics to small-scale matter power.</p>
       </article>
       <article class="theme">
         <canvas class="rv" data-fig="research" data-state="dense" aria-hidden="true"></canvas>
-        <h3>The dense absorbers return</h3>
-        <p>Dense absorbers are rare, but their broad damping wings still affect forest statistics after many sightlines are combined. Changes in the absorber population can shift the same statistics used for cosmology, sometimes in ways that resemble changes in small-scale matter power.</p>
+        <h3>Dense absorbers in the forest statistics</h3>
+        <p>Dense absorbers such as damped Lyman-alpha absorbers (DLAs) are rare, but their broad damping wings still affect forest statistics after many sightlines are combined. Changes in the absorber population can shift the same statistics used for cosmology, sometimes in ways that resemble changes in small-scale matter power.</p>
         <p>Their population therefore enters the cosmological likelihood.</p>
       </article>
     </div>
@@ -110,10 +122,62 @@
 </section>
 
 
+<section id="play" class="chapter">
+  <div class="col">
+    <div class="chapter-head">
+      <div><div class="num">02 · PLAY</div></div>
+      <div>
+        <h2>Play</h2>
+      </div>
+    </div>
+
+    <div class="play-stage">
+      <a class="play-board play-still" href="https://jibancat.github.io/ink-forest/" tabindex="-1" aria-hidden="true"><img src="images/ink-forest-preview.jpg" width="1300" height="1001" alt="" loading="lazy" decoding="async"><div class="tag">OBSERVE → INFER → REVISE · an interactive Lyα tomography game</div></a>
+      <div class="play-text">
+        <h3>Ink Forest</h3>
+        <p>You have ten sightlines into a simulated universe that you cannot see directly. Follow each Lyα forest spectrum, reconstruct the structure between the sightlines, and decide where to look next.</p>
+        <p>Some sightlines help reveal the structure; others can distort the inferred map.</p>
+        <div class="facts">status · v1.1, simulated spectra (PRIYA, z = 3)<br>stack · web, WebGL 2, no backend</div>
+        <a class="btn" href="https://jibancat.github.io/ink-forest/">Play <span class="arrow">↗</span></a>
+        <p style="margin-top:22px; font-size:14px; color:#8FA0B4">Also playable: <a href="https://jibancat.github.io/priya-widget/" style="color:#DCEBF6; border-bottom:1px solid #5B6B7C">the PRIYA parameter sweep ↗</a>, a small live widget: move a cosmological or astrophysical parameter and watch the forest power spectrum respond.</p>
+      </div>
+    </div>
+
+    <div class="play-shelf">
+      <a class="play-card" href="https://jibancat.github.io/lya-gas-to-forest/" aria-labelledby="pc-gas pc-gas-kind">
+        <span class="pv"><img src="images/play-gas-to-forest.jpg" srcset="images/play-gas-to-forest.jpg 1x, images/play-gas-to-forest-2x.jpg 2x" width="960" height="540" alt="" loading="lazy" decoding="async"><span class="credit">toy model<span class="more"> · not a hydro simulation</span></span></span>
+        <span class="kind" id="pc-gas-kind">Explore · fourteen scenes</span>
+        <h3 id="pc-gas">Lyα: from gas to <span class="tail">forest <span class="arrow" aria-hidden="true">↗</span></span></h3>
+        <p>How the hydrogen between a distant quasar and us becomes a forest of absorption lines. Hold the gas, drag the light, and read a spectrum backwards.</p>
+      </a>
+      <a class="play-card" href="https://www.youtube.com/watch?v=T091PUsAJuA" aria-labelledby="pc-dla pc-dla-kind">
+        <span class="pv"><img src="images/play-dla-animation.jpg" srcset="images/play-dla-animation.jpg 1x, images/play-dla-animation-2x.jpg 2x" width="960" height="540" alt="" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true"></span><span class="credit">simulated · PRIYA</span></span>
+        <span class="kind" id="pc-dla-kind">Watch · animation, 56 s</span>
+        <h3 id="pc-dla">The Lyman-alpha forest and its <span class="tail">DLA <span class="arrow" aria-hidden="true">↗</span></span></h3>
+        <p>One sightline through the PRIYA simulation. Each hydrogen cloud the quasar's light crosses leaves a line in its spectrum. Where the light passes a galaxy and its gas, it meets a damped Lyman-alpha absorber.</p>
+        <p class="note">Design after Andrew Pontzen's DLA animation; gas view after an idea by Yueying Ni.</p>
+      </a>
+      <a class="play-card" href="https://jibancat.github.io/talks/lya/" aria-labelledby="pc-talk20 pc-talk20-kind">
+        <span class="pv"><img src="images/play-talk-lya.jpg" srcset="images/play-talk-lya.jpg 1x, images/play-talk-lya-2x.jpg 2x" width="960" height="540" alt="" loading="lazy" decoding="async"><span class="credit">simulated · PRIYA</span></span>
+        <span class="kind" id="pc-talk20-kind">Talk · 20 min · MIT LITP gathering</span>
+        <h3 id="pc-talk20">The Lyman-alpha <span class="tail">Forest <span class="arrow" aria-hidden="true">↗</span></span></h3>
+        <p>A public talk built as a live web page: the light of distant quasars, read through one simulated universe.</p>
+      </a>
+      <a class="play-card" href="https://jibancat.github.io/talks/leinweber-2026/" aria-labelledby="pc-talk10 pc-talk10-kind">
+        <span class="pv"><img src="images/play-talk-leinweber.jpg" srcset="images/play-talk-leinweber.jpg 1x, images/play-talk-leinweber-2x.jpg 2x" width="960" height="540" alt="" loading="lazy" decoding="async"><span class="credit">data · DESI DR1</span></span>
+        <span class="kind" id="pc-talk10-kind">Talk · 10 min · Leinweber Foundation site visit, 2026</span>
+        <h3 id="pc-talk10">The Lyman-alpha Forest, in ten <span class="tail">minutes <span class="arrow" aria-hidden="true">↗</span></span></h3>
+        <p>From the Dark Energy Spectroscopic Instrument (DESI) 3D map of galaxies and quasars into the PRIYA simulation: the forest of lines, and a galaxy in its shadow.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
 <section id="projects" class="chapter">
   <div class="col">
     <div class="chapter-head">
-      <div><div class="num">02 · PROJECTS</div><canvas class="strip" data-row="101" aria-hidden="true"></canvas></div>
+      <div><div class="num">03 · PROJECTS</div><canvas class="strip" data-row="101" aria-hidden="true"></canvas></div>
       <div>
         <h2>Selected work</h2>
       </div>
@@ -129,8 +193,8 @@
         <div>
           <div class="meta"><span>Small-scale cosmology</span><span>JCAP 2026</span></div>
           <h3>Small-scale Lyα cosmology with high-resolution spectra</h3>
-          <p class="what">High-resolution quasar spectra resolve the Lyα forest out to wavenumbers of order k ~ 10 h Mpc^-1, smaller scales than those usually used in cosmological analyses. Using KODIAQ-SQUAD and XQ-100, we constrain the amplitude and slope of the small-scale matter power spectrum.</p>
-          <p class="result">The amplitude is consistent with DESI DR1 and Planck; the inferred slope is somewhat higher.</p>
+          <p class="what">High-resolution quasar spectra resolve the Lyα forest out to wavenumbers of order <i>k</i> ~ 10 <i>h</i>&nbsp;Mpc<sup>−1</sup>, smaller scales than those usually used in cosmological analyses. Using KODIAQ-SQUAD (the Keck Observatory Database of Ionized Absorption toward Quasars, combined with the Spectral Quasar Absorption Database) and XQ-100 (a survey of 100 quasars observed with X-shooter on the Very Large Telescope), we constrain the amplitude and slope of the small-scale matter power spectrum.</p>
+          <p class="result">For KODIAQ-SQUAD, the amplitude is consistent with DESI DR1 and Planck, but the inferred slope is somewhat higher; XQ-100 agrees with the extended Baryon Oscillation Spectroscopic Survey (eBOSS) and Planck.</p>
           <div class="links"><a href="https://arxiv.org/abs/2509.18271">arXiv ↗</a><a href="https://doi.org/10.1088/1475-7516/2026/07/094">JCAP 07 (2026) 094 ↗</a></div>
           <details>
             <summary><span>How it works</span></summary>
@@ -158,7 +222,7 @@
             <dt>Absorbers</dt><dd>Compare models with zero, one, or more systems</dd>
             <dt>Output</dt><dd>Posterior over redshift and column density</dd>
           </dl>
-          <p class="note">From SDSS DR12 to DR16Q and now DESI DR2.</p>
+          <p class="note">From the Sloan Digital Sky Survey (SDSS) DR12 to DR16Q and now DESI DR2.</p>
         </details>
       </article>
 
@@ -167,7 +231,7 @@
         <span class="pv"><canvas data-fig="fidelity" data-row="239" data-c0="380" data-c1="900" aria-label="The same simulated sightline shown at progressively finer resolution from left to right, ending at full detail."></canvas><span class="credit">one sightline, resolution rising · simulated · PRIYA</span></span>
         <div class="meta"><span>Emulation · uncertainty</span><span>2022 – 2023</span></div>
         <h3>Multi-fidelity emulation</h3>
-        <p class="what">High-resolution cosmological simulations are expensive, so there are never enough of them to densely cover the parameter space needed for inference. Multi-fidelity emulation combines many lower-resolution simulations with a smaller number of high-resolution runs and learns the correction between them.</p>
+        <p class="what">High-resolution cosmological simulations are expensive, making it difficult to densely cover the parameter space needed for inference. Multi-fidelity (MF) emulation combines many lower-resolution simulations with a smaller number of high-resolution runs and learns the correction between them.</p>
         <p class="what">This lets the emulator use information from both resolutions without treating the lower-resolution simulations as exact.</p>
         <div class="links"><a href="https://arxiv.org/abs/2105.01081">MF emulator ↗</a><a href="https://arxiv.org/abs/2306.03144">MF-Box ↗</a><a href="https://arxiv.org/abs/2207.06445">forest ↗</a><a href="https://github.com/jibanCat/matter_emu_mfbox">code ↗</a><a href="https://www.youtube.com/watch?v=tQIytDnWOzk">watch the method ↗</a></div>
         <details>
@@ -183,7 +247,7 @@
         <div class="meta"><span>Dense absorbers · emulation</span><span>in preparation</span></div>
         <h3>What dense absorbers do to the Lyα forest</h3>
         <p class="what">Even a small number of dense absorbers can change forest statistics through their broad damping wings. Changing the absorber population changes those statistics as well, sometimes in ways that resemble changes in small-scale matter power.</p>
-        <p class="what">HCDEmu models this dependence by emulating how the forest responds to different absorber populations. That response then enters the likelihood.</p>
+        <p class="what">HCDEmu models this dependence by emulating how the forest responds to different populations of high-column-density (HCD) absorbers. That response then enters the likelihood.</p>
         <div class="links"><a href="https://github.com/jibancat/hcd_priya">hcd_priya ↗</a></div>
         <details>
           <summary><span>How it works</span></summary>
@@ -197,7 +261,7 @@
         <span class="pv"><canvas data-fig="ask" data-ask="One population, or two?" aria-label="A typographic question asking whether the black holes are described by one population or two"></canvas></span>
         <div class="meta"><span>Population inference</span><span>PRD 2024</span></div>
         <h3>One population of black holes, or two?</h3>
-        <p class="what">GWTC-3 has a very different population-inference problem. The objects are merging black holes rather than absorbers, but the inference is again about a population rather than a single object.</p>
+        <p class="what">Gravitational-wave events in the third Gravitational-Wave Transient Catalog (GWTC-3) present a different population-inference problem. The objects are merging black holes rather than absorbers, but the inference is again about a population rather than a single object.</p>
         <p class="what">Using hierarchical population inference, we constrained how much two proposed black-hole populations could mix.</p>
         <div class="links"><a href="https://arxiv.org/abs/2408.09024">arXiv ↗</a><a href="https://doi.org/10.1103/PhysRevD.110.063031">PRD 110, 063031 ↗</a></div>
         <details>
@@ -212,66 +276,13 @@
       <summary><span>More work</span></summary>
       <ul class="more-list">
         <li><span class="t"><a href="https://arxiv.org/abs/2306.05471">PRIYA: a suite of Lyα forest simulations ↗</a></span><span class="d">The PRIYA simulations behind much of the artwork above were led by Simeon Bird. The field at the top of this page is one slice from a PRIYA box. <a href="https://jibancat.github.io/priya-widget/">Parameter sweep ↗</a> · <a href="https://www.youtube.com/watch?v=4ccwRtn-NTQ">watch the render ↗</a> · <a href="https://arxiv.org/abs/2309.03943">eBOSS constraints ↗</a></span></li>
-        <li><span class="t"><a href="https://jibancat.github.io/priya-widget/">PRIYA P1D parameter sweep ↗</a></span><span class="d">Move any of thirteen cosmological and astrophysical parameters and watch the forest power change.</span></li>
-        <li><span class="t">Neural-network emulators and the Goku suite</span><span class="d">Nonlinear matter-power emulation and simulations beyond ΛCDM. The project is led by graduate student Yanhui Yang, who has done a great deal of outstanding work around the Goku suite. <a href="https://arxiv.org/abs/2507.07177">emulator ↗</a> · <a href="https://arxiv.org/abs/2501.06296">Goku ↗</a></span></li>
+        <li><span class="t"><a href="https://jibancat.github.io/priya-widget/">PRIYA parameter sweep of the one-dimensional flux power spectrum (P1D) ↗</a></span><span class="d">Move any of thirteen cosmological and astrophysical parameters and watch the forest power change.</span></li>
+        <li><span class="t">Neural-network emulators and the Goku suite</span><span class="d">Nonlinear matter-power emulation and simulations beyond the standard cosmological model (ΛCDM). The project is led by graduate student Yanhui Yang, who has done a great deal of outstanding work around the Goku suite. <a href="https://arxiv.org/abs/2507.07177">emulator ↗</a> · <a href="https://arxiv.org/abs/2501.06296">Goku ↗</a></span></li>
         <li><span class="t"><a href="https://arxiv.org/abs/2305.00023">C IV absorbers in SDSS DR12 ↗</a></span><span class="d">Machine learning applied to a different absorption line, in work led by Reza Monadi.</span></li>
         <li><span class="t"><a href="https://arxiv.org/abs/2006.07343">Quasar redshifts from a Gaussian process ↗</a></span><span class="d">Redshift inference using the same quasar emission model behind the absorber finder.</span></li>
-        <li><span class="t"><a href="https://arxiv.org/abs/2312.13249">Primordial-black-hole microlensing ↗</a></span><span class="d">Collaborative work with the LLNL group on what Roman and ground-based surveys could see.</span></li>
+        <li><span class="t"><a href="https://arxiv.org/abs/2312.13249">Primordial-black-hole microlensing ↗</a></span><span class="d">Collaborative work with the Lawrence Livermore National Laboratory (LLNL) group on what Roman and ground-based surveys could see.</span></li>
       </ul>
     </details>
-  </div>
-</section>
-
-
-<section id="play" class="chapter">
-  <div class="col">
-    <div class="chapter-head">
-      <div><div class="num">03 · PLAY</div></div>
-      <div>
-        <h2>Play</h2>
-      </div>
-    </div>
-
-    <div class="play-stage">
-      <a class="play-board play-still" href="https://jibancat.github.io/ink-forest/" tabindex="-1" aria-hidden="true"><img src="images/ink-forest-preview.jpg" width="1300" height="1001" alt="" loading="lazy" decoding="async"><div class="tag">OBSERVE → INFER → REVISE · an interactive Lyα tomography game</div></a>
-      <div class="play-text">
-        <h3>Ink Forest</h3>
-        <p>You have ten sightlines into a universe you cannot see. Ride each Lyα forest spectrum, reconstruct the structure between them, and decide where to look next.</p>
-        <p>Some sightlines reveal the cosmic web; others can distort the map.</p>
-        <div class="facts">status · v1.1, simulated spectra (PRIYA, z = 3)<br>stack · web, WebGL 2, no backend</div>
-        <a class="btn" href="https://jibancat.github.io/ink-forest/">Play <span class="arrow">↗</span></a>
-        <p style="margin-top:14px; font-size:12.5px; color:#8FA0B4"></p>
-        <p style="margin-top:22px; font-size:14px; color:#8FA0B4">Also playable: <a href="https://jibancat.github.io/priya-widget/" style="color:#DCEBF6; border-bottom:1px solid #5B6B7C">the PRIYA parameter sweep ↗</a>, a small live widget: move a cosmological or astrophysical parameter and watch the forest power spectrum respond.</p>
-      </div>
-    </div>
-
-    <div class="play-shelf">
-      <a class="play-card" href="https://jibancat.github.io/lya-gas-to-forest/" aria-labelledby="pc-gas pc-gas-kind">
-        <span class="pv"><img src="images/play-gas-to-forest.jpg" srcset="images/play-gas-to-forest.jpg 1x, images/play-gas-to-forest-2x.jpg 2x" width="960" height="540" alt="" loading="lazy" decoding="async"><span class="credit">toy model<span class="more"> · not a hydro simulation</span></span></span>
-        <span class="kind" id="pc-gas-kind">Explore · fourteen scenes</span>
-        <h3 id="pc-gas">Lyα: from gas to <span class="tail">forest <span class="arrow" aria-hidden="true">↗</span></span></h3>
-        <p>How the hydrogen between a distant quasar and us becomes a forest of absorption lines. Hold the gas, drag the light, and read a spectrum backwards.</p>
-      </a>
-      <a class="play-card" href="https://www.youtube.com/watch?v=T091PUsAJuA" aria-labelledby="pc-dla pc-dla-kind">
-        <span class="pv"><img src="images/play-dla-animation.jpg" srcset="images/play-dla-animation.jpg 1x, images/play-dla-animation-2x.jpg 2x" width="960" height="540" alt="" loading="lazy" decoding="async"><span class="play-badge" aria-hidden="true"></span><span class="credit">simulated · PRIYA</span></span>
-        <span class="kind" id="pc-dla-kind">Watch · animation, 56 s</span>
-        <h3 id="pc-dla">The Lyman-alpha forest and its <span class="tail">DLA <span class="arrow" aria-hidden="true">↗</span></span></h3>
-        <p>One sightline through the PRIYA simulation. Each hydrogen cloud the quasar's light crosses leaves a line in its spectrum; where the light passes a galaxy and its gas: a damped Lyman-alpha, everyone's favourite object.</p>
-        <p class="note">Design after Andrew Pontzen's DLA animation; gas view after an idea by Yueying Ni.</p>
-      </a>
-      <a class="play-card" href="https://jibancat.github.io/talks/lya/" aria-labelledby="pc-talk20 pc-talk20-kind">
-        <span class="pv"><img src="images/play-talk-lya.jpg" srcset="images/play-talk-lya.jpg 1x, images/play-talk-lya-2x.jpg 2x" width="960" height="540" alt="" loading="lazy" decoding="async"><span class="credit">simulated · PRIYA</span></span>
-        <span class="kind" id="pc-talk20-kind">Talk · 20 min · MIT LITP gathering</span>
-        <h3 id="pc-talk20">The Lyman-alpha <span class="tail">Forest <span class="arrow" aria-hidden="true">↗</span></span></h3>
-        <p>A public talk built as a live web page: the light of distant quasars, read through one simulated universe.</p>
-      </a>
-      <a class="play-card" href="https://jibancat.github.io/talks/leinweber-2026/" aria-labelledby="pc-talk10 pc-talk10-kind">
-        <span class="pv"><img src="images/play-talk-leinweber.jpg" srcset="images/play-talk-leinweber.jpg 1x, images/play-talk-leinweber-2x.jpg 2x" width="960" height="540" alt="" loading="lazy" decoding="async"><span class="credit">data · DESI DR1</span></span>
-        <span class="kind" id="pc-talk10-kind">Talk · 10 min · Leinweber Foundation site visit, 2026</span>
-        <h3 id="pc-talk10">The Lyman-alpha Forest, in ten <span class="tail">minutes <span class="arrow" aria-hidden="true">↗</span></span></h3>
-        <p>From DESI's 3D map of galaxies and quasars into the PRIYA simulation: the forest of lines, and a galaxy in its shadow.</p>
-      </a>
-    </div>
   </div>
 </section>
 
@@ -353,9 +364,9 @@
       <div class="k">NOW</div>
       <div>
         <p>I am currently a postdoctoral fellow at the University of Michigan. Most of my work is on the Lyα forest, dense absorbers, and the inference problems that come with them. I have also worked on emulation and black-hole population inference.</p>
-        <p>I did my PhD at UC Riverside with Simeon Bird, after studying physics and astrophysics at National Taiwan University. As an undergraduate, I also spent much of my time in the philosophy department. I pursued a philosophy minor for several years, although I never formally completed it, and for much of college I probably took philosophy more seriously than physics.</p>
-        <p class="personal">Outside physics, I play cello, brew coffee, cook, and make wagashi and Suzhou-style mooncakes. I also like hiking, road trips, and exploring America's natural landscapes.</p>
-        <p class="personal">Before graduate school, I also worked on text mining and digital editions of classical Chinese texts. I no longer work in philosophy, but it probably shaped how I think more than astronomy did. That training still shows up in how I do science. I tend to spend a lot of time on the assumptions behind a problem, on whether the question is framed correctly, and on things that are easy to leave unexamined.</p>
+        <p>I did my PhD at UC Riverside with Simeon Bird, after studying physics and astrophysics at National Taiwan University. As an undergraduate, I also spent quite a bit of time in the philosophy department. I pursued a philosophy minor for several years, although I never formally completed it. At times, I probably took philosophy more seriously than physics.</p>
+        <p class="personal">Outside physics, I play cello, brew coffee, cook, and make wagashi and Suzhou-style mooncakes. I also enjoy hiking, road trips, and exploring natural landscapes across the US.</p>
+        <p class="personal">Before graduate school, I worked on text mining and digital editions of classical Chinese texts. I no longer work in philosophy, but I think that background still influences how I approach physics. I tend to spend a lot of time thinking about the assumptions behind a problem, whether the question is framed correctly, and things that are easy to leave unexamined.</p>
       </div>
       <div class="side">
         <div class="row"><span>email</span><a href="mailto:mfho@umich.edu">mfho@umich.edu</a></div>
@@ -372,7 +383,7 @@
 </main>
 
 <footer>
-  <div><canvas class="strip" data-row="239" aria-hidden="true"></canvas>simulation data: PRIYA (Bird, Fernandez, Ho et al. 2023; Fernandez, Bird &amp; Ho 2024) · films, figures and this page: Ming-Feng Ho · the GP spectrum in Selected work is synthetic</div>
+  <div><canvas class="strip" data-row="239" aria-hidden="true"></canvas>simulation data: PRIYA (Bird, Fernandez, Ho et al. 2023; Fernandez, Bird &amp; Ho 2024) · films, figures and this page: Ming-Feng Ho · the Gaussian-process (GP) spectrum in Selected work is synthetic</div>
   <div><a href="cv/">CV</a> ·&nbsp;<a href="https://scholar.google.com/citations?user=gF5V0LUAAAAJ&hl=en">Scholar&nbsp;↗</a> ·&nbsp;<a href="https://orcid.org/0000-0002-4457-890X">ORCID&nbsp;↗</a> ·&nbsp;<a href="https://github.com/jibancat/">GitHub&nbsp;↗</a></div>
 </footer>
 
