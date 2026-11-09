@@ -90,6 +90,7 @@ const host = document.getElementById('hero');
 const REDUCED = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 const COARSE = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
 let lastTouch = COARSE, keepChip = null;                    // the explicit keep control, drawn only for touch
+let lastKey = false, pointerInside = false, keepSign = null; // mouse and keyboard get a sign in words beside the hand instead
 const glCanvas = document.getElementById('gl');            // WebGL for its whole life
 const field2dCanvas = document.getElementById('field2d');  // Canvas2D for its whole life
 const canvas = document.getElementById('c'), ctx = canvas.getContext('2d');   // the overlay, owned by layout()
@@ -140,6 +141,10 @@ let hover = null, everSelected = false;                      // { row, t0, cerem
 let lastRowChange = -1e9;
 let pointerX = null, pointer = { x: -5000, y: -5000 };
 let revealX = 0, sweepFrom = 0;                              // probe progress along the row (fraction)
+// A mouse chooses rows just by passing over them, so it gets a calmer grammar than touch: each new
+// row is read from the far end at a walking pace, and the row holds until the hand has clearly left it.
+const READ_SPEED_MOUSE = 0.6;                                // field widths per second (touch keeps 2.2)
+const ROW_HYST = 6;                                          // px a mouse must move off the row before the next one is chosen
 let firstSpectrum = null;
 const kept = []; const MAXKEPT = 8;
 let xiTarget = new Float64Array(NLAG + 1), xiShown = new Float64Array(NLAG + 1);
@@ -196,7 +201,7 @@ const colX = c => L.fx + c * L.fw / NX;
 const STRIP = 7, LIFT = 16, RIBBON = 210;
 
 // ------------------------------------------------------------------ input
-function setPointer(x, y) {
+function setPointer(x, y, touchTap = false) {
   pointer = { x, y };
   const inField = x >= Math.max(0, L.fx) && x <= Math.min(W, L.fx + L.fw) && y >= L.fy && y <= L.bottom;
   if (!inField) return;
@@ -204,10 +209,12 @@ function setPointer(x, y) {
   pointerX = Math.max(0, Math.min(1, (x - L.fx) / L.fw));
   if (row === cooldownRow) return;
   cooldownRow = -1;
+  // a small tremor on the way to a click must not swap the sightline (and restart its reading) under the hand
+  if (!touchTap && hover && row !== hover.row && Math.abs(y - rowY(hover.row)) < ROW_HYST) return;
   if (!hover || hover.row !== row) {
     if (kept.some(k => k.row === row)) return;
     const ceremony = !everSelected; everSelected = true;
-    const skimming = !ceremony && clock - lastRowChange < 400;
+    const skimming = touchTap && !ceremony && clock - lastRowChange < 400;   // a mouse always starts a new row from the far end
     hover = { row, t0: clock, ceremony };
     lastRowChange = clock;
     // skimming keeps the read position (the family of rows switches under the probe); when the hand settles,
@@ -237,7 +244,7 @@ const rel = e => { const r = host.getBoundingClientRect(); return [e.clientX - r
 // drag scrubs the light along that row; a second tap on the same row keeps it.
 let touch = { down: null, moved: false, rowAtDown: -1 };
 canvas.addEventListener('pointermove', e => {
-  if (e.pointerType !== 'touch') lastTouch = false;
+  if (e.pointerType !== 'touch') { lastTouch = false; lastKey = false; pointerInside = true; }
   if (e.pointerType === 'touch') {
     if (!touch.down) return;
     const [x, y] = rel(e);
@@ -258,10 +265,12 @@ canvas.addEventListener('pointerdown', e => {
     const near = hover && Math.abs(p[1] - rowY(hover.row)) < 16;
     touch = { down: p, moved: false, rowAtDown: hover ? hover.row : -1 };
     if (near) { pointerX = Math.max(0, Math.min(1, (p[0] - L.fx) / L.fw)); return; }
-    setPointer(p[0], p[1]); return;
+    setPointer(p[0], p[1], true); return;
   }
+  lastKey = false; pointerInside = true;
   setPointer(p[0], p[1]); pointerDown();
 });
+canvas.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') pointerInside = false; });
 canvas.addEventListener('pointerup', e => {
   if (e.pointerType !== 'touch' || !touch.down) return;
   if (!touch.moved && hover && hover.row === touch.rowAtDown) pointerDown();
@@ -284,6 +293,7 @@ function selectRow(row) {
 }
 canvas.addEventListener('keydown', ev => {
   const step = ev.shiftKey ? 12 : 3;
+  if (/^(Arrow|Enter$| $)/.test(ev.key)) { lastKey = true; lastTouch = false; }
   if (ev.key === 'ArrowDown' || ev.key === 'ArrowUp') {
     const dir = ev.key === 'ArrowDown' ? 1 : -1;
     selectRow((hover ? hover.row : Math.round(NY / 2)) + dir * step);
@@ -403,9 +413,28 @@ function drawRibbon() {
     text('keep', x + w / 2, y + h / 2 + 1, { font: '500 12px ' + SANS, color: P.ink, align: 'center', baseline: 'middle', tracking: 0.5 });
     ctx.restore();
   }
-  // one small readout, late
+  // mouse and keyboard: until the first keep, say in plain words what a click does, right beside the hand.
+  // It is a caption, not a button: a click anywhere keeps the row, so the hand never has to travel to it.
+  keepSign = null;
+  if (hover && !lastTouch && kept.length === 0 && revealX > 0.15 && (lastKey || pointerInside)) {
+    const a = ease(Math.min(1, (revealX - 0.15) / 0.06));
+    const label = lastKey ? 'press Enter to keep this Lyα sightline' : 'click to keep this Lyα sightline';
+    const font = '500 12.5px ' + SANS;
+    ctx.save(); ctx.font = font; const tw = ctx.measureText(label).width; ctx.restore();
+    const w = Math.ceil(tw + label.length * 0.3) + 24, h = 28;
+    const ax = lastKey ? rx : pointer.x, ay = lastKey ? y0 : pointer.y;
+    let x = ax + 16, y = ay + 18;
+    if (x + w > W - 12) x = ax - 16 - w;                       // near the right edge it sits on the other side
+    if (y + h > L.bottom + 6) y = ay - 18 - h;                 // and above the hand on the lowest rows
+    x = Math.max(12, x);
+    keepSign = { x, y, w, h, label };
+    ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = 'rgba(244,242,237,0.95)'; ctx.strokeStyle = P.ink; ctx.lineWidth = 1;
+    ctx.fillRect(x, y, w, h); ctx.strokeRect(x + 0.5, y + 0.5, w - 1, h - 1); ctx.restore();
+    text(label, x + 12, y + h / 2 + 1, { font, color: P.ink, baseline: 'middle', alpha: a, tracking: 0.3 });
+  }
+  // one small readout, late (its place is the sign's until the first keep)
   const sciA = ease(prog(firstSpectrum, 900, 1400));
-  if (hover && sciA > 0 && cRev > 0 && cRev < NX) text(fmtInt(cRev * DV) + ' km/s', rx + 10, y0 + 22, { font: '11px ' + MONO, color: P.muted, alpha: sciA * 0.85 });
+  if (hover && sciA > 0 && !keepSign && cRev > 0 && cRev < NX) text(fmtInt(cRev * DV) + ' km/s', rx + 10, y0 + 22, { font: '11px ' + MONO, color: P.muted, alpha: sciA * 0.85 });
   ctx.restore();
   return { row, y0 };
 }
@@ -510,7 +539,7 @@ function drawHint() {
   if (a <= 0.01) return;
   const line = COARSE
     ? (everSelected ? 'drag to read  ·  then keep' : 'tap a sightline')
-    : (everSelected ? 'click to keep it' : 'move to choose a sightline');
+    : (everSelected ? 'move up or down for another sightline' : 'move to choose a sightline');
   const x = W < 700 ? 22 : 72, y = L.bottom - 26;
   ctx.save(); ctx.globalAlpha = a * 0.85; ctx.strokeStyle = P.muted; ctx.lineWidth = 1;
   ctx.beginPath(); ctx.moveTo(x, y - 4); ctx.lineTo(x + 13, y - 4); ctx.stroke(); ctx.restore();
@@ -554,14 +583,15 @@ function tick(now) {
 
   // the probe: sweeps from the far end to the hand, then follows it. The first row is read slowly.
   if (hover) {
-    const speed = hover.ceremony && !REDUCED ? 0.36 : 2.2;   // field widths per second; no slow ceremony under reduced motion
+    // field widths per second; no slow reading at all under reduced motion
+    const speed = REDUCED ? 2.2 : hover.ceremony ? 0.36 : lastTouch ? 2.2 : READ_SPEED_MOUSE;
     const goal = pointerX ?? 0.6;
     const waiting = hover.ceremony && clock - hover.t0 < 700;   // anticipation: the row is named, the light appears, then it moves
     if (settleAt !== null && clock >= settleAt) { revealX = Math.max(0, revealX - 0.16); settleAt = null; }
     // inside a saturated run the light labours: the crossing of a dense absorber takes time
     const cNow = Math.min(NX - 1, Math.round(revealX * NX));
     const dense = satMask[hover.row * NX + cNow] ? 0.16 : 1;
-    if (!waiting) { const sp = speed * dense; if (revealX < goal - 0.002) revealX = Math.min(goal, revealX + sp * dt); else revealX += (goal - revealX) * Math.min(1, dt * 10); }
+    if (!waiting) { const sp = speed * dense; if (revealX < goal - 0.002) revealX = Math.min(goal, revealX + sp * dt); else revealX += (goal - revealX) * Math.min(1, dt * (lastTouch ? 10 : 4)); }
     if (firstSpectrum === null && hover.ceremony && revealX >= goal - 0.01) firstSpectrum = clock;
     // dense run: the field reacts as the probe enters, the mark comes after it has left
     if (bloom.run) {
@@ -658,7 +688,7 @@ window.__cs = {
   setLayers(v) { OPT.layers = v; }, setFrac(v) { fieldFrac = v; layout(); },
   advance(ms, steps = 1) { for (let i = 0; i < steps; i++) tick(clock + ms / steps); },
   realtime, set onTick(f) { onTick = f; }, tickListeners,
-  get state() { return { hover, kept: kept.map(k => k.row), L, firstSpectrum, xiEmerge, xiAxes, identity, revealX, bloom, keepChip, lastTouch, fieldFrac }; },
+  get state() { return { hover, kept: kept.map(k => k.row), L, firstSpectrum, xiEmerge, xiAxes, identity, revealX, bloom, keepChip, keepSign, lastTouch, lastKey, fieldFrac }; },
   rowAt(r) { return rowY(r); },
 };
 }
